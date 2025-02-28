@@ -157,8 +157,12 @@ footer {
 
 .footer__section {
 	margin: 0 auto;
+}
+
+.footer__content {
 	display: grid;
 	gap: 2rem;
+	margin-bottom: 1rem;
 	grid-template-columns: 1fr;
 }
 
@@ -228,9 +232,15 @@ footer {
 	text-decoration: none;
 }
 
+.copyright {
+	text-align: center;
+	margin: 20px 0;
+}
+
 /* End Footer */
 
 .container {
+	padding: 1rem;
 	width: 100%;
 }
 
@@ -258,10 +268,11 @@ footer {
 }
 @media (min-width: 1024px) {
 	.container {
+		padding: 0;
 		max-width: 1024px;
 	}
 
-	.footer__section {
+	.footer__content {
 		grid-template-columns: 1fr 1fr 1fr;
 	}
 }
