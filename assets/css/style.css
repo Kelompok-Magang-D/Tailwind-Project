@@ -26,7 +26,6 @@ button {
 	border: 0;
 }
 
-
 /* Navbar */
 header {
 	position: sticky;
@@ -87,63 +86,149 @@ header {
 }
 
 .hamburger {
-    display: block;
-    cursor: pointer;
+	display: block;
+	cursor: pointer;
 }
 
 .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: var(--color-white);
+	display: block;
+	width: 25px;
+	height: 3px;
+	margin: 5px auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	background-color: var(--color-white);
 }
 
 .hamburger__menu {
-    position: fixed;
-    left: -100%;
-    top: 4rem;
-    flex-direction: column;
-    background-color: var(--color-primary);
-    width: 100%;
-    text-align: center;
-    transition: 0.3s;
-    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-    padding: 2rem 0;
-    z-index: 99;
+	position: fixed;
+	left: -100%;
+	top: 4rem;
+	flex-direction: column;
+	background-color: var(--color-primary);
+	width: 100%;
+	text-align: center;
+	transition: 0.3s;
+	box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+	padding: 2rem 0;
+	z-index: 99;
 }
 
 .hamburger__menu.active {
-    left: 0;
+	left: 0;
 }
 
 .hamburger__menu a {
-    display: block;
-    padding: 1.5rem;
-    text-decoration: none;
-    color: var(--color-white);
-    font-size: 1.2rem;
-    transition: 0.3s;
+	display: block;
+	padding: 1.5rem;
+	text-decoration: none;
+	color: var(--color-white);
+	font-size: 1.2rem;
+	transition: 0.3s;
 }
 
 .hamburger__menu a:hover {
-    color: var(--color-secondary);
+	color: var(--color-secondary);
 }
 
 .hamburger.active .bar:nth-child(2) {
-    opacity: 0;
+	opacity: 0;
 }
 
 .hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+	transform: translateY(8px) rotate(45deg);
 }
 
 .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+	transform: translateY(-8px) rotate(-45deg);
 }
 /* End Navbar */
+
+/*  */
+
+/* Footer */
+
+footer {
+	padding: 2rem 0;
+	width: 100%;
+	background-color: var(--color-primary);
+	color: var(--color-white);
+}
+
+.footer__section {
+	margin: 0 auto;
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: 1fr;
+}
+
+.brand__column {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.contact__info {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.contact__info > a {
+	font-size: 1rem;
+	color: var(--color-white);
+	text-decoration: none;
+}
+
+.links__column > h1 {
+	font-size: 1.5rem;
+}
+
+.links__column > ul {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+	margin: 0;
+}
+
+.links__column > ul > li {
+	margin: 0.5rem 0;
+}
+
+.links__column > ul > li > a {
+	font-size: 1rem;
+	color: var(--color-white);
+	text-decoration: none;
+}
+
+.media__column {
+	align-items: end;
+}
+
+.media__column > h1 {
+	font-size: 1.5rem;
+}
+
+.media__column > ul {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+	margin: 0;
+}
+
+.media__column > ul > li {
+	margin: 0.5rem 0;
+}
+
+.media__column > ul > li > a {
+	font-size: 1rem;
+	color: var(--color-white);
+	text-decoration: none;
+}
+
+/* End Footer */
 
 .container {
 	width: 100%;
@@ -174,6 +259,10 @@ header {
 @media (min-width: 1024px) {
 	.container {
 		max-width: 1024px;
+	}
+
+	.footer__section {
+		grid-template-columns: 1fr 1fr 1fr;
 	}
 }
 @media (min-width: 1280px) {
