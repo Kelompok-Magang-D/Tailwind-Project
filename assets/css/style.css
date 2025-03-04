@@ -144,6 +144,76 @@ header {
 }
 /* End Navbar */
 
+
+/* Testimoni */
+#testimoni{
+    background-color: var(--color-primary);
+	padding: 2rem 0;
+    margin: 2rem 0;
+}
+#testimoni .judul{
+    font-size: 2.5rem;
+    font-family: "Big Shoulders", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: #F6F0F0;
+    text-align: center;
+}
+#testimoni .j1{
+    font-size: 1.2rem;
+    font-family: "Big Shoulders", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: #F6F0F0;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Card-Slide */
+.pesan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container__testimoni {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.container__testimoni .card-content{
+    display: flex;
+    padding: 5rem;
+    column-gap: 2rem;
+}
+.cards{
+    border: 1px solid var(--color-primary);
+    border-radius: 15px;
+    width: 50vh;
+    padding: 2rem;
+    background-color: var(--color-cream);
+}
+.cards .profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.3rem;
+}
+.profile .name-testi{
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+.name-testi .name{
+    font-weight: 400;
+}
+.name-testi .testi{
+    font-weight: 300;
+}
+/* End Testimoni */
+
 /* FAQ */
 #faq {
 	margin: 2rem 0;
