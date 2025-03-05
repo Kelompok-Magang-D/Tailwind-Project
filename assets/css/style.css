@@ -381,3 +381,66 @@ footer {
 		max-width: 1536px;
 	}
 }
+
+/* jumbotron */
+#jumbotron {
+    background: url("../images/coffee-logo.svg") no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+.jumbotroncontent {
+    max-width: 700px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.jumbotroncontent h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.jumbotroncontent p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.button__cta {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #ff6600;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.button__cta:hover {
+    background: #e65c00;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    #jumbotron {
+        height: 60vh;
+    }
+
+    .jumbotroncontent h1 {
+        font-size: 2rem;
+    }
+
+    .jumbotroncontent p {
+        font-size: 1rem;
+    }
+
+    .button__cta {
+        font-size: 0.9rem;
+    }
+}
