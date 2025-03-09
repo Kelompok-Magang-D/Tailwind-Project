@@ -6,246 +6,349 @@
 		<title>Kopiko - Home</title>
 		<link rel="stylesheet" href="./assets/css/style.css" />
 		<script src="https://unpkg.com/feather-icons"></script>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" 
-		rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
 
 		<!-- swiper js -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+		/>
 	</head>
 	<body>
 		<main>
 			<!-- Navbar - Hendri -->
-			<header>
-				<div class="container navbar__header">
-					<a href="">
+			<header class="header">
+				<div class="container header__container">
+					<a href="" class="header__logo-link">
 						<img
 							src="./assets/images/coffee-logo.svg"
 							alt="Logo brand"
-							class="logo"
+							class="header__logo"
 						/>
 					</a>
 					<nav class="navbar">
-						<a href="#home">Home</a>
-						<a href="#about">About</a>
-						<a href="#blog">Blog</a>
+						<a href="#home" class="navbar__link">Home</a>
+						<a href="#about" class="navbar__link">About</a>
+						<a href="#blog" class="navbar__link">Blog</a>
 					</nav>
-					<div class="button__action">
-						<button class="button__contact">Contact Us</button>
+					<div class="header__actions">
+						<button class="button button__contact">Contact Us</button>
 						<div class="hamburger">
 							<span class="bar"></span>
 							<span class="bar"></span>
 							<span class="bar"></span>
 						</div>
 						<div class="hamburger__menu">
-							<a href="#home">Home</a>
-							<a href="#about">About</a>
-							<a href="#blog">Blog</a>
+							<a href="#home" class="hamburger__link">Home</a>
+							<a href="#about" class="hamburger__link">About</a>
+							<a href="#blog" class="hamburger__link">Blog</a>
 						</div>
 					</div>
 				</div>
 			</header>
 			<!-- Jumbotron -->
-			<section id="jumbotron">
-				<div class="jumbotroncontent">
-					<h1>Kopii</h1>
-					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam, harum ad ex minima unde cumque ea a. Architecto nostrum autem aliquid excepturi voluptate impedit? Magni obcaecati repudiandae reiciendis inventore asperiores.</p>
-					<a href="#about" class="button__cta">Learn More</a>
+			<section id="jumbotron" class="jumbotron">
+				<div class="jumbotron__content">
+					<h1 class="jumbotron__title">Cohee</h1>
+					<p class="jumbotron__text">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam,
+						harum ad ex minima unde cumque ea a. Architecto nostrum autem
+						aliquid excepturi voluptate impedit?
+					</p>
+				</div>
+			</section>
+			<!-- CTA -->
+			<section id="cta" class="cta">
+				<div class="container">
+					<article class="cta__content">
+						<h2 class="cta__title">Order some coffee?</h2>
+						<p class="cta__description">
+							Order some coffee and get a discount on your first order
+						</p>
+						<button class="button button__cta">Order Now</button>
+					</article>
+				</div>
+			</section>
+			<!-- About History Section -->
+			<section class="history">
+				<div class="container">
+					<div class="history__content">
+						<div class="history__text">
+							<h2 class="history__title">About Us</h2>
+							<p class="history__description">
+								Founded in 2010, Kopiko started as a small coffee cart with a
+								big dream. Our mission is to provide exceptional coffee
+								experiences while supporting sustainable farming practices and
+								building community connections. We value quality, authenticity,
+								and creating welcoming spaces where everyone feels at home.
+							</p>
+						</div>
+						<img
+							class="history__image"
+							src="./assets/images/history-coffee.jpg"
+							alt="Kopiko coffee shop history"
+						/>
+					</div>
 				</div>
 			</section>
 			<!-- Features -->
-			<section id="features"></section>
-      <!-- Testimoni - I Putu Sukma -->
-			<section id="testimoni">
+			<section id="features" class="features">
 				<div class="container">
-					<h2 class="judul">Testimoni</h2>
-					<h4 class="j1">Semua Pesan Baik dari Customer Kami</h4>
-					<div class="pesan">
-						<div class="container__testimoni swiper mySwiper">
-							<div class="card-content swiper-wrapper">
-					
-								<div class="cards swiper-slide">
-									<i data-feather="star"></i>
-									<i data-feather="star"></i>
-									<i data-feather="star"></i>
-									<div class="profile">
-										<i data-feather="user"></i>
-										<div class="name-testi">
-											<h3 class="name">John Doe</h3>
-											<h4 class="testi">"Rasa kopinya enak sekali"</h4>
-										</div>
-									</div>
-								</div>
-								
-								<div class="cards swiper-slide">
-									<i data-feather="star"></i>
-									<i data-feather="star"></i>
-									<i data-feather="star"></i>
-									<div class="profile">
-										<i data-feather="user"></i>
-										<div class="name-testi">
-											<h3 class="name">Tonny Stark</h3>
-											<h4 class="testi">"Rasa kopinya enak sekali"</h4>
-										</div>
-									</div>
-								</div>
-				
-								<div class="cards swiper-slide">
-									<i data-feather="star"></i>
-									<i data-feather="star"></i>
-									<i data-feather="star"></i>
-									<div class="profile">
-										<i data-feather="user"></i>
-										<div class="name-testi">
-											<h3 class="name">Mark Geats</h3>
-											<h4 class="testi">"Rasa kopinya enak sekali"</h4>
-										</div>
-									</div>
-								</div>
-								<div class="cards swiper-slide">
-									<i data-feather="star"></i>
-									<i data-feather="star"></i>
-									<i data-feather="star"></i>
-									<div class="profile">
-										<i data-feather="user"></i>
-										<div class="name-testi">
-											<h3 class="name">Itsuna Kei</h3>
-											<h4 class="testi">"Rasa kopinya enak sekali"</h4>
-										</div>
-									</div>
-								</div>
-								<div class="cards swiper-slide">
-									<i data-feather="star"></i>
-									<i data-feather="star"></i>
-									<i data-feather="star"></i>
-									<div class="profile">
-										<i data-feather="user"></i>
-										<div class="name-testi">
-											<h3 class="name">Kevin Bae</h3>
-											<h4 class="testi">"Rasa kopinya enak sekali"</h4>
-										</div>
-									</div>
-								</div>
-				
-							</div>
+					<h2 class="section__title">Our Services</h2>
+					<div class="features__grid">
+						<div class="feature__card">
+							<div class="feature__icon">☕</div>
+							<h3 class="feature__title">Premium Coffee</h3>
+							<p class="feature__text">
+								Hand-selected beans from around the world
+							</p>
+						</div>
+						<div class="feature__card">
+							<div class="feature__icon">🌱</div>
+							<h3 class="feature__title">Organic</h3>
+							<p class="feature__text">
+								100% organic ingredients for every brew
+							</p>
+						</div>
+						<div class="feature__card">
+							<div class="feature__icon">🚚</div>
+							<h3 class="feature__title">Fast Delivery</h3>
+							<p class="feature__text">Get your coffee delivered quickly</p>
 						</div>
 					</div>
 				</div>
-			<!-- FAQ Nabila  -->
-			<section id="faq">
+			</section>
+			<!-- Testimoni - I Putu Sukma -->
+			<section id="testimoni">
 				<div class="container">
-					<h2 class="title__faq">FAQ</h2>
-					<div class="accordion">
-						<div class="accordion-item">
-							<div class="accordion-header" onclick="toggleAccordion(this)">
-								<span>Apakah tersedia layanan pesan antar?</span>
-								<span class="icon">+</span>
+					<h2 class="testimonial__title">Testimoni</h2>
+					<p class="testimonial__subtitle">
+						Semua Pesan Baik dari Customer Kami
+					</p>
+					<div class="testimonial__container">
+						<div class="swiper mySwiper">
+							<div class="swiper-wrapper">
+								<div class="testimonial__card swiper-slide">
+									<div class="testimonial__stars">
+										<i data-feather="star"></i>
+										<i data-feather="star"></i>
+										<i data-feather="star"></i>
+										<i data-feather="star"></i>
+										<i data-feather="star"></i>
+									</div>
+									<p class="testimonial__text">
+										"Rasa kopinya enak sekali, saya selalu kembali untuk
+										menikmatinya."
+									</p>
+									<div class="testimonial__profile">
+										<div class="testimonial__avatar">
+											<i data-feather="user"></i>
+										</div>
+										<div class="testimonial__info">
+											<h3 class="testimonial__username">John Doe</h3>
+											<p class="testimonial__occupation">Coffee Enthusiast</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="testimonial__card swiper-slide">
+									<div class="testimonial__stars">
+										<i data-feather="star"></i>
+										<i data-feather="star"></i>
+										<i data-feather="star"></i>
+										<i data-feather="star"></i>
+										<i data-feather="star"></i>
+									</div>
+									<p class="testimonial__text">
+										"Tempat yang nyaman dan pelayanan yang ramah. Sangat
+										recommended!"
+									</p>
+									<div class="testimonial__profile">
+										<div class="testimonial__avatar">
+											<i data-feather="user"></i>
+										</div>
+										<div class="testimonial__info">
+											<h3 class="testimonial__username">Tonny Stark</h3>
+											<p class="testimonial__occupation">Regular Customer</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="testimonial__card swiper-slide">
+									<div class="testimonial__stars">
+										<i data-feather="star"></i>
+										<i data-feather="star"></i>
+										<i data-feather="star"></i>
+										<i data-feather="star"></i>
+										<i data-feather="star"></i>
+									</div>
+									<p class="testimonial__text">
+										"Menu kopinya bervariasi dan harga sangat terjangkau.
+										Perfect!"
+									</p>
+									<div class="testimonial__profile">
+										<div class="testimonial__avatar">
+											<i data-feather="user"></i>
+										</div>
+										<div class="testimonial__info">
+											<h3 class="testimonial__username">Mark Geats</h3>
+											<p class="testimonial__occupation">Coffee Blogger</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="testimonial__card swiper-slide">
+									<div class="testimonial__stars">
+										<i data-feather="star"></i>
+										<i data-feather="star"></i>
+										<i data-feather="star"></i>
+										<i data-feather="star"></i>
+										<i data-feather="star"></i>
+									</div>
+									<p class="testimonial__text">
+										"Suasana cafe yang cozy dan wifi kencang, cocok untuk kerja
+										remote."
+									</p>
+									<div class="testimonial__profile">
+										<div class="testimonial__avatar">
+											<i data-feather="user"></i>
+										</div>
+										<div class="testimonial__info">
+											<h3 class="testimonial__username">Itsuna Kei</h3>
+											<p class="testimonial__occupation">Digital Nomad</p>
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="accordion-content">
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- FAQ Nabila  -->
+			<section id="faq" class="faq">
+				<div class="container">
+					<h2 class="section__title">FAQ</h2>
+					<div class="accordion">
+						<div class="accordion__item">
+							<div class="accordion__header" onclick="toggleAccordion(this)">
+								<span>Apakah tersedia layanan pesan antar?</span>
+								<span class="accordion__icon">+</span>
+							</div>
+							<div class="accordion__content">
 								Ya, anda dapat memesan melalui aplikasi Gofood dan Shopeefood.
 							</div>
 						</div>
-						<div class="accordion-item">
-							<div class="accordion-header" onclick="toggleAccordion(this)">
+						<div class="accordion__item">
+							<div class="accordion__header" onclick="toggleAccordion(this)">
 								<span>Jenis kopi apa yang dijual?</span>
-								<span class="icon">+</span>
+								<span class="accordion__icon">+</span>
 							</div>
-							<div class="accordion-content">Kopi blabla.</div>
+							<div class="accordion__content">Kopi blabla.</div>
 						</div>
-						<div class="accordion-item">
-							<div class="accordion-header" onclick="toggleAccordion(this)">
+						<div class="accordion__item">
+							<div class="accordion__header" onclick="toggleAccordion(this)">
 								<span>Apakah tersedia Wi-fi</span>
-								<span class="icon">+</span>
+								<span class="accordion__icon">+</span>
 							</div>
-							<div class="accordion-content">Ya, ada Wi-fi gratis.</div>
+							<div class="accordion__content">Ya, ada Wi-fi gratis.</div>
 						</div>
-						<div class="accordion-item">
-							<div class="accordion-header" onclick="toggleAccordion(this)">
+						<div class="accordion__item">
+							<div class="accordion__header" onclick="toggleAccordion(this)">
 								<span>Metode pembayaran apa saja yang tersedia?</span>
-								<span class="icon">+</span>
+								<span class="accordion__icon">+</span>
 							</div>
-							<div class="accordion-content">
+							<div class="accordion__content">
 								Pembayaran dapat dilakukan secara cash, melalui kartu
 								debit/kredit dan dompet digital.
 							</div>
 						</div>
-						<div class="accordion-item">
-							<div class="accordion-header" onclick="toggleAccordion(this)">
+						<div class="accordion__item">
+							<div class="accordion__header" onclick="toggleAccordion(this)">
 								<span>Pertanyaan selanjutnya?</span>
-								<span class="icon">+</span>
+								<span class="accordion__icon">+</span>
 							</div>
-							<div class="accordion-content">Jawaban selanjutnya.</div>
+							<div class="accordion__content">Jawaban selanjutnya.</div>
 						</div>
-						<div class="accordion-item">
-							<div class="accordion-header" onclick="toggleAccordion(this)">
+						<div class="accordion__item">
+							<div class="accordion__header" onclick="toggleAccordion(this)">
 								<span>Pertanyaan selanjutnya?</span>
-								<span class="icon">+</span>
+								<span class="accordion__icon">+</span>
 							</div>
-							<div class="accordion-content">Jawaban selanjutnya.</div>
+							<div class="accordion__content">Jawaban selanjutnya.</div>
 						</div>
 					</div>
 				</div>
-				</div>
 			</section>
-			<!-- CTA -->
-			 <section id="cta">
-				<div class="container">
-					<article class="cta__content">
-						<h1 class="cta__title">Order some coffee?</h1>
-						<p class="cta__description">Order some coffee and get a discount on your first order</p>
-						<button class="cta__button">Order Now</button>
-					</article>
-				</div>
-			 </section>
+			<section id="ads__pricing"></section>
+
 			<!-- Footer -->
-			<footer>
-				<div class="container footer__section">
+			<footer class="footer">
+				<div class="container footer__container">
 					<div class="footer__content">
-						<div class="brand__column">
-							<a href="#">
+						<div class="footer__brand">
+							<a href="#" class="footer__logo-link">
 								<img
 									src="./assets/images/coffee-logo.svg"
-									alt=""
-									class="logo"
+									alt="Kopiko logo"
+									class="footer__logo"
 								/>
 							</a>
-							<p>
+							<p class="footer__description">
 								Lorem, ipsum dolor sit amet consectetur adipisicing elit.
 								Veritatis in dolorem id recusandae, cum tempora. Corporis error
 								neque quia iusto.
 							</p>
-							<div class="contact__info">
-								<a href="">123 Eco Street, Green City</a>
-								<a href="tel:+15555555555">+1 (555) 555-5555</a>
-								<a href="mailto:contact@comment.com">contact@comment.com</a>
+							<div class="footer__contact">
+								<a href="#" class="footer__contact-item"
+									>123 Eco Street, Green City</a
+								>
+								<a href="tel:+15555555555" class="footer__contact-item"
+									>+1 (555) 555-5555</a
+								>
+								<a
+									href="mailto:contact@comment.com"
+									class="footer__contact-item"
+									>contact@comment.com</a
+								>
 							</div>
 						</div>
-						<div class="links__column">
-							<h1>Quick Links</h1>
-							<ul>
-								<li><a href="">Home</a></li>
-								<li><a href="">About</a></li>
-								<li><a href="">Blog</a></li>
+						<div class="footer__links">
+							<h3 class="footer__heading">Quick Links</h3>
+							<ul class="footer__list">
+								<li class="footer__item">
+									<a href="#" class="footer__link">Home</a>
+								</li>
+								<li class="footer__item">
+									<a href="#" class="footer__link">About</a>
+								</li>
+								<li class="footer__item">
+									<a href="#" class="footer__link">Blog</a>
+								</li>
 							</ul>
 						</div>
-						<div class="media__column">
-							<h1>Social Media</h1>
-							<ul>
-								<li>
-									<a href=""> Instagram </a>
+						<div class="footer__social">
+							<h3 class="footer__heading">Social Media</h3>
+							<ul class="footer__list">
+								<li class="footer__item">
+									<a href="#" class="footer__link">Instagram</a>
 								</li>
-								<li>
-									<a href="">Facebook</a>
+								<li class="footer__item">
+									<a href="#" class="footer__link">Facebook</a>
 								</li>
-								<li>
-									<a href="">LinkedIn</a>
+								<li class="footer__item">
+									<a href="#" class="footer__link">LinkedIn</a>
 								</li>
 							</ul>
 						</div>
 					</div>
-					<hr />
-					<div class="copyright">
+					<hr class="footer__divider" />
+					<div class="footer__copyright">
 						<p>Copyright &copy; 2025 Kopiko. All rights reserved.</p>
 					</div>
 				</div>
