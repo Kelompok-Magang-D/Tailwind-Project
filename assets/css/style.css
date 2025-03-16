@@ -498,10 +498,22 @@ button {
 	margin-bottom: 2rem;
 }
 
-/* Ads Pricing */
-#ads__pricing {
-	height: 60rem;
-	background: url("../images/ads-pricing.jpg") no-repeat center center/cover;
+/* Adverstisement*/
+.advertisement__title{
+	text-align: center;
+	color: var(--color-white);
+	padding: 30px;
+}
+.advertisement__container{
+	display: flex;
+	gap: 10px;
+	justify-content: space-around;
+}
+.advertisement__container img {
+	max-width: auto;
+	object-fit: contain;
+	border-radius: var(--radius);
+	margin-bottom: 30px;
 }
 /* End Ads */
 
