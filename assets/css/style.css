@@ -16,6 +16,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	width: auto;
 }
 
 body {
@@ -761,34 +762,14 @@ button {
 	position: relative;
 	margin: 0 auto;
 	border-radius: var(--radius);
-}
-
-.video-container img {
-	width: 100%;
-	height: auto;
-	object-fit: cover;
-}
-
-.play-button {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 64px;
-	height: 64px;
-	background: var(--color-white);
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
 	justify-content: center;
-	font-size: 1.5rem;
-	cursor: pointer;
-	transition: var(--transition);
+	display: flex;
 }
 
-.play-button:hover {
-	background: var(--color-primary);
-	color: var(--color-white);
+.video-embed {
+	width: 100%;
+	aspect-ratio: 16 / 9; /* Sesuaikan rasio aspek */
+	border: none;
 }
 
 /* Blogs */
@@ -890,10 +871,12 @@ button {
 	/* Navbar becomes visible, hamburger menu hidden */
 	.navbar {
 		display: flex;
+		margin-left: 4rem;
 	}
 
 	.button__contact {
 		display: flex;
+		margin-bottom: 0.3rem;
 	}
 
 	.hamburger {
@@ -998,6 +981,9 @@ button {
 
 	.stat-item h3 {
 		font-size: 4rem;
+	}
+	.video-container {
+		width: 100%;
 	}
 }
 
