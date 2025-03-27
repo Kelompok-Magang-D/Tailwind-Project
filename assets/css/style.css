@@ -1,8 +1,8 @@
 :root {
-	--color-primary: #a79277;
-	--color-secondary: #d1bb9e;
-	--color-cream: #fff2e1;
-	--color-white: #f7f7f7;
+	--color-primary: #433738;
+	--color-secondary: #c49b63;
+	--color-cream: #dfcda9;
+	--color-white: #f8f7f7;
 	--color-black: #000;
 	--color-teal: #3d8d7a;
 	--color-accent: #ff6600;
@@ -52,7 +52,7 @@ button {
 .button__cta {
 	display: inline-block;
 	padding: 12px 24px;
-	background: var(--color-accent);
+	background: var(--color-secondary);
 	color: var(--color-white);
 	font-size: 1rem;
 	font-weight: bold;
@@ -63,7 +63,8 @@ button {
 }
 
 .button__cta:hover {
-	background: #e65c00;
+	background: var(--color-white);
+	color: var(--color-black);
 	transform: translateY(-2px);
 }
 
@@ -188,15 +189,15 @@ button {
 
 /* Jumbotron */
 .jumbotron {
-	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
-		url("../images/cta-background.jpg") no-repeat center center/cover;
+	background: url("../images/cta-background.jpg") no-repeat center center/cover;
 	height: 80vh;
 	display: flex;
 	align-items: center;
 	justify-content: start;
 	text-align: left;
 	padding: 2rem;
-	color: var(--color-white);
+	color: var(--color-primary);
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .jumbotron__content {
@@ -571,14 +572,13 @@ button {
 
 .footer__heading {
 	font-size: 1.5rem;
-	margin-bottom: 1rem;
+	margin-bottom: 0.5rem;
 }
 
 .footer__list {
 	list-style: none;
 	display: flex;
 	flex-direction: column;
-	gap: 0.75rem;
 }
 
 .footer__item {
@@ -610,14 +610,19 @@ button {
 
 /* About Page Styles */
 .about-hero {
-	padding: 4rem 0;
+	padding: 2rem 0;
 	background-color: var(--color-primary);
 	color: var(--color-white);
 }
 
 .about-hero h1 {
 	font-size: 3rem;
-	margin-bottom: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+.about-hero p {
+	font-size: 1.25rem;
+	font-weight: bold;
 }
 
 .about-section {
@@ -683,14 +688,21 @@ button {
 	height: 150px;
 	border-radius: 50%;
 	object-fit: cover;
-	margin-bottom: 1rem;
 	border: 3px solid var(--color-white);
 }
 
 .team-member h3 {
 	font-size: 1.5rem;
-	margin-bottom: 0.5rem;
+	margin-bottom: 0.25rem;
 	color: var(--color-primary);
+}
+
+.team-member h4 {
+	margin-bottom: 0.5rem;
+}
+
+.team-member p {
+	margin-top: 0.5rem;
 }
 
 .gallery-title {
@@ -847,14 +859,14 @@ button {
 
 .blogs__card-link {
 	width: 100%;
-	color: var(--color-black);
+	color: var(--color-w);
 	background-color: var(--color-cream);
 	transition: var(--transition);
 }
 
 .blogs__card-link:hover {
-	background-color: var(--color-black);
-	color: var(--color-white);
+	background-color: var(--color-white);
+	color: var(--color-primary);
 }
 /* End Blogs */
 
@@ -916,6 +928,7 @@ button {
 
 .detail__author-name {
 	font-weight: 600;
+	font-size: larger;
 }
 
 .detail__author-meta {
