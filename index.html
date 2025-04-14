@@ -4,7 +4,36 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Cohee - Home</title>
-		<link rel="stylesheet" href="./assets/css/style.css" />
+		
+		<!-- Tailwind CSS CDN -->
+		<script src="https://cdn.tailwindcss.com"></script>
+		
+		<!-- Custom Tailwind Config -->
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							primary: '#433738',
+							secondary: '#c49b63',
+							cream: '#dfcda9',
+							white: '#f8f7f7',
+							black: '#000',
+							teal: '#3d8d7a',
+							accent: '#ff6600',
+						},
+						borderRadius: {
+							DEFAULT: '0.5rem',
+						},
+						fontFamily: {
+							'roboto': ['Roboto', 'sans-serif'],
+							'big-shoulders': ['"Big Shoulders"', 'sans-serif'],
+						},
+					}
+				}
+			}
+		</script>
+		
 		<script src="https://unpkg.com/feather-icons"></script>
 		<link
 			rel="stylesheet"
@@ -16,6 +45,7 @@
 			href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
 			rel="stylesheet"
 		/>
+		<link rel="stylesheet" href="./assets/css/style.css">
 
 		<!-- swiper js -->
 		<link
@@ -23,68 +53,71 @@
 			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 		/>
 	</head>
-	<body>
+	<body class="font-roboto leading-relaxed bg-primary text-black">
 		<main>
 			<!-- Navbar - Hendri -->
-			<header class="header">
-				<div class="container header__container">
-					<a href="" class="header__logo-link">
+			<header class="sticky top-0 z-50 w-full bg-primary shadow-md">
+				<div class="container mx-auto px-4 flex items-center justify-between h-16">
+					<a href="" class="block">
 						<img
 							src="./assets/images/coffee-logo.svg"
 							alt="Logo brand"
-							class="header__logo"
+							class="w-[4.5rem] h-auto"
 						/>
 					</a>
-					<nav class="navbar">
-						<a href="index.html" class="navbar__link">Home</a>
-						<a href="about.html" class="navbar__link">About</a>
-						<a href="blogs.html" class="navbar__link">Blog</a>
+					<nav class="hidden md:flex items-center gap-8">
+						<a href="index.html" class="text-lg font-medium text-white hover:text-secondary transition-all duration-300">Home</a>
+						<a href="about.html" class="text-lg font-medium text-white hover:text-secondary transition-all duration-300">About</a>
+						<a href="blogs.html" class="text-lg font-medium text-white hover:text-secondary transition-all duration-300">Blog</a>
 					</nav>
-					<div class="header__actions">
-						<button class="button button__contact">Contact Us</button>
-						<div class="hamburger">
-							<span class="bar"></span>
-							<span class="bar"></span>
-							<span class="bar"></span>
+					<div class="flex gap-4 items-center">
+						<button class="bg-teal text-white font-bold uppercase text-base px-5 py-3 rounded shadow-md hover:bg-white hover:text-black transition-all duration-300">Contact Us</button>
+						<div class="hamburger md:hidden cursor-pointer">
+							<span class="bar block w-[25px] h-[3px] my-[5px] mx-auto bg-white transition-all duration-300"></span>
+							<span class="bar block w-[25px] h-[3px] my-[5px] mx-auto bg-white transition-all duration-300"></span>
+							<span class="bar block w-[25px] h-[3px] my-[5px] mx-auto bg-white transition-all duration-300"></span>
 						</div>
-						<div class="hamburger__menu">
-							<a href="index.html" class="hamburger__link">Home</a>
-							<a href="about.html" class="hamburger__link">About</a>
-							<a href="blogs.html" class="hamburger__link">Blog</a>
+						<div class="hamburger__menu fixed left-[-100%] top-16 flex-col bg-primary w-full text-center transition-all duration-300 shadow-lg py-8 z-[99]">
+							<a href="index.html" class="block py-6 text-white text-xl hover:text-secondary transition-all duration-300">Home</a>
+							<a href="about.html" class="block py-6 text-white text-xl hover:text-secondary transition-all duration-300">About</a>
+							<a href="blogs.html" class="block py-6 text-white text-xl hover:text-secondary transition-all duration-300">Blog</a>
 						</div>
 					</div>
 				</div>
 			</header>
+			
 			<!-- Jumbotron -->
-			<section id="jumbotron" class="jumbotron">
-				<div class="jumbotron__content">
-					<h1 class="jumbotron__title">Cohee</h1>
-					<p class="jumbotron__text">
+			<section id="jumbotron" class="bg-[url('./assets/images/cta-background.jpg')] bg-center bg-cover h-[80vh] flex items-center justify-start text-left p-8 text-primary" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+				<div class="jumbotron__content max-w-[60rem] p-10 rounded">
+					<h1 class="text-5xl font-bold mb-4 tracking-wider" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Cohee</h1>
+					<p class="text-2xl mb-8 leading-relaxed">
 						Discover your perfect brew at Cohee. Where every cup tells a story,
 						and every sip is an adventure. Join us in celebrating the art of
 						exceptional coffee.
 					</p>
 				</div>
 			</section>
+			
 			<!-- CTA -->
-			<section id="cta" class="cta">
-				<div class="container">
-					<article class="cta__content">
-						<h2 class="cta__title">Order some coffee?</h2>
-						<p class="cta__description">
+			<section id="cta" class="py-24 bg-primary">
+				<div class="container mx-auto px-4">
+					<article class="flex flex-col items-center text-center text-white max-w-[700px] mx-auto">
+						<h2 class="text-4xl mb-4 font-bold" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);">Order some coffee?</h2>
+						<p class="text-xl mb-8">
 							Order some coffee and get a discount on your first order
 						</p>
-						<button class="button button__cta">Order Now</button>
+						<button class="inline-block px-6 py-3 bg-secondary text-white text-base font-bold rounded uppercase shadow-md hover:bg-white hover:text-black transform hover:-translate-y-1 transition-all duration-300">Order Now</button>
 					</article>
 				</div>
 			</section>
+			
 			<!-- About History Section -->
-			<section class="history">
-				<div class="container">
-					<div class="history__content">
-						<div class="history__text">
-							<h2 class="history__title">About Us</h2>
-							<p class="history__description">
+			<section class="py-24 bg-white rounded-t-[4rem]">
+				<div class="container mx-auto px-4">
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-center md:text-left">
+						<div class="flex flex-col justify-center">
+							<h2 class="text-3xl mb-8 text-primary font-bold">About Us</h2>
+							<p class="text-xl mb-8 font-semibold leading-relaxed text-primary">
 								Founded in 2010, Cohee started as a small coffee cart with a big
 								dream. Our mission is to provide exceptional coffee experiences
 								while supporting sustainable farming practices and building
@@ -93,138 +126,140 @@
 							</p>
 						</div>
 						<img
-							class="history__image"
+							class="w-full h-auto rounded shadow-md"
 							src="./assets/images/history-coffee.jpg"
 							alt="Cohee coffee shop history"
 						/>
 					</div>
 				</div>
 			</section>
+			
 			<!-- Features -->
-			<section id="features" class="features">
-				<div class="container">
-					<h2 class="section__title">Our Services</h2>
-					<div class="features__grid">
-						<div class="feature__card">
-							<div class="feature__icon">☕</div>
-							<h3 class="feature__title">Premium Coffee</h3>
-							<p class="feature__text">
+			<section id="features" class="py-16 bg-white">
+				<div class="container mx-auto px-4">
+					<h2 class="text-3xl text-primary text-center mb-8 font-bold">Our Services</h2>
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+						<div class="bg-primary p-8 rounded text-center shadow-md hover:transform hover:-translate-y-1 transition-all duration-300">
+							<div class="text-5xl mb-4">☕</div>
+							<h3 class="text-2xl text-white mb-4 text-capitalize font-bold">Premium Coffee</h3>
+							<p class="text-cream">
 								Hand-selected beans from around the world
 							</p>
 						</div>
-						<div class="feature__card">
-							<div class="feature__icon">🌱</div>
-							<h3 class="feature__title">Organic</h3>
-							<p class="feature__text">
+						<div class="bg-primary p-8 rounded text-center shadow-md hover:transform hover:-translate-y-1 transition-all duration-300">
+							<div class="text-5xl mb-4">🌱</div>
+							<h3 class="text-2xl text-white mb-4 font-bold">Organic</h3>
+							<p class="text-cream">
 								100% organic ingredients for every brew
 							</p>
 						</div>
-						<div class="feature__card">
-							<div class="feature__icon">🚚</div>
-							<h3 class="feature__title">Fast Delivery</h3>
-							<p class="feature__text">Get your coffee delivered quickly</p>
+						<div class="bg-primary p-8 rounded text-center shadow-md hover:transform hover:-translate-y-1 transition-all duration-300">
+							<div class="text-5xl mb-4">🚚</div>
+							<h3 class="text-2xl text-white mb-4 font-bold">Fast Delivery</h3>
+							<p class="text-cream">Get your coffee delivered quickly</p>
 						</div>
 					</div>
 				</div>
 			</section>
+			
 			<!-- Testimoni - I Putu Sukma -->
-			<section id="testimoni">
-				<div class="container">
-					<h2 class="testimonial__title">Testimoni</h2>
-					<p class="testimonial__subtitle">
+			<section id="testimoni" class="bg-primary py-16">
+				<div class="container mx-auto px-4">
+					<h2 class="text-3xl text-white text-center mb-8">Testimoni</h2>
+					<p class="text-xl text-white text-center mb-12 font-normal">
 						Semua Pesan Baik dari Customer Kami
 					</p>
-					<div class="testimonial__container">
+					<div class="max-w-[1200px] px-4 mx-auto">
 						<div class="swiper mySwiper">
 							<div class="swiper-wrapper">
-								<div class="testimonial__card swiper-slide">
-									<div class="testimonial__stars">
-										<i data-feather="star"></i>
-										<i data-feather="star"></i>
-										<i data-feather="star"></i>
-										<i data-feather="star"></i>
-										<i data-feather="star"></i>
+								<div class="testimonial__card swiper-slide bg-cream rounded p-8 h-full shadow-md flex flex-col">
+									<div class="flex text-accent mb-4">
+										<i data-feather="star" class="mr-2"></i>
+										<i data-feather="star" class="mr-2"></i>
+										<i data-feather="star" class="mr-2"></i>
+										<i data-feather="star" class="mr-2"></i>
+										<i data-feather="star" class="mr-2"></i>
 									</div>
-									<p class="testimonial__text">
+									<p class="italic mb-6 text-black leading-relaxed">
 										"Rasa kopinya enak sekali, saya selalu kembali untuk
 										menikmatinya."
 									</p>
-									<div class="testimonial__profile">
-										<div class="testimonial__avatar">
+									<div class="flex items-center gap-4">
+										<div class="w-[50px] h-[50px] bg-primary rounded-full flex items-center justify-center text-white">
 											<i data-feather="user"></i>
 										</div>
-										<div class="testimonial__info">
-											<h3 class="testimonial__username">John Doe</h3>
-											<p class="testimonial__occupation">Coffee Enthusiast</p>
+										<div class="flex flex-col">
+											<h3 class="font-semibold text-lg text-black">John Doe</h3>
+											<p class="text-sm text-gray-600">Coffee Enthusiast</p>
 										</div>
 									</div>
 								</div>
 
-								<div class="testimonial__card swiper-slide">
-									<div class="testimonial__stars">
-										<i data-feather="star"></i>
-										<i data-feather="star"></i>
-										<i data-feather="star"></i>
-										<i data-feather="star"></i>
-										<i data-feather="star"></i>
+								<div class="testimonial__card swiper-slide bg-cream rounded p-8 h-full shadow-md flex flex-col">
+									<div class="flex text-accent mb-4">
+										<i data-feather="star" class="mr-2"></i>
+										<i data-feather="star" class="mr-2"></i>
+										<i data-feather="star" class="mr-2"></i>
+										<i data-feather="star" class="mr-2"></i>
+										<i data-feather="star" class="mr-2"></i>
 									</div>
-									<p class="testimonial__text">
+									<p class="italic mb-6 text-black leading-relaxed">
 										"Tempat yang nyaman dan pelayanan yang ramah. Sangat
 										recommended!"
 									</p>
-									<div class="testimonial__profile">
-										<div class="testimonial__avatar">
+									<div class="flex items-center gap-4">
+										<div class="w-[50px] h-[50px] bg-primary rounded-full flex items-center justify-center text-white">
 											<i data-feather="user"></i>
 										</div>
-										<div class="testimonial__info">
-											<h3 class="testimonial__username">Tonny Stark</h3>
-											<p class="testimonial__occupation">Regular Customer</p>
+										<div class="flex flex-col">
+											<h3 class="font-semibold text-lg text-black">Tonny Stark</h3>
+											<p class="text-sm text-gray-600">Regular Customer</p>
 										</div>
 									</div>
 								</div>
 
-								<div class="testimonial__card swiper-slide">
-									<div class="testimonial__stars">
-										<i data-feather="star"></i>
-										<i data-feather="star"></i>
-										<i data-feather="star"></i>
-										<i data-feather="star"></i>
-										<i data-feather="star"></i>
+								<div class="testimonial__card swiper-slide bg-cream rounded p-8 h-full shadow-md flex flex-col">
+									<div class="flex text-accent mb-4">
+										<i data-feather="star" class="mr-2"></i>
+										<i data-feather="star" class="mr-2"></i>
+										<i data-feather="star" class="mr-2"></i>
+										<i data-feather="star" class="mr-2"></i>
+										<i data-feather="star" class="mr-2"></i>
 									</div>
-									<p class="testimonial__text">
+									<p class="italic mb-6 text-black leading-relaxed">
 										"Menu kopinya bervariasi dan harga sangat terjangkau.
 										Perfect!"
 									</p>
-									<div class="testimonial__profile">
-										<div class="testimonial__avatar">
+									<div class="flex items-center gap-4">
+										<div class="w-[50px] h-[50px] bg-primary rounded-full flex items-center justify-center text-white">
 											<i data-feather="user"></i>
 										</div>
-										<div class="testimonial__info">
-											<h3 class="testimonial__username">Mark Geats</h3>
-											<p class="testimonial__occupation">Coffee Blogger</p>
+										<div class="flex flex-col">
+											<h3 class="font-semibold text-lg text-black">Mark Geats</h3>
+											<p class="text-sm text-gray-600">Coffee Blogger</p>
 										</div>
 									</div>
 								</div>
 
-								<div class="testimonial__card swiper-slide">
-									<div class="testimonial__stars">
-										<i data-feather="star"></i>
-										<i data-feather="star"></i>
-										<i data-feather="star"></i>
-										<i data-feather="star"></i>
-										<i data-feather="star"></i>
+								<div class="testimonial__card swiper-slide bg-cream rounded p-8 h-full shadow-md flex flex-col">
+									<div class="flex text-accent mb-4">
+										<i data-feather="star" class="mr-2"></i>
+										<i data-feather="star" class="mr-2"></i>
+										<i data-feather="star" class="mr-2"></i>
+										<i data-feather="star" class="mr-2"></i>
+										<i data-feather="star" class="mr-2"></i>
 									</div>
-									<p class="testimonial__text">
+									<p class="italic mb-6 text-black leading-relaxed">
 										"Suasana cafe yang cozy dan wifi kencang, cocok untuk kerja
 										remote."
 									</p>
-									<div class="testimonial__profile">
-										<div class="testimonial__avatar">
+									<div class="flex items-center gap-4">
+										<div class="w-[50px] h-[50px] bg-primary rounded-full flex items-center justify-center text-white">
 											<i data-feather="user"></i>
 										</div>
-										<div class="testimonial__info">
-											<h3 class="testimonial__username">Itsuna Kei</h3>
-											<p class="testimonial__occupation">Digital Nomad</p>
+										<div class="flex flex-col">
+											<h3 class="font-semibold text-lg text-black">Itsuna Kei</h3>
+											<p class="text-sm text-gray-600">Digital Nomad</p>
 										</div>
 									</div>
 								</div>
@@ -234,101 +269,102 @@
 					</div>
 				</div>
 			</section>
+			
 			<!-- FAQ Nabila  -->
-			<section id="faq" class="faq">
-				<div class="container">
-					<h2 class="section__title">FAQ</h2>
-					<div class="accordion">
-						<div class="accordion__item">
-							<div class="accordion__header" onclick="toggleAccordion(this)">
+			<section id="faq" class="py-16 bg-white">
+				<div class="container mx-auto px-4">
+					<h2 class="text-3xl text-primary text-center mb-8">FAQ</h2>
+					<div class="w-full max-w-[800px] mx-auto">
+						<div class="mb-4 rounded overflow-hidden shadow-md">
+							<div class="accordion__header flex justify-between items-center p-6 bg-primary text-white cursor-pointer font-semibold transition-all duration-300 hover:bg-[#8a7862]" onclick="toggleAccordion(this)">
 								<span>Apakah tersedia layanan pesan antar?</span>
-								<span class="accordion__icon">+</span>
+								<span class="text-2xl font-bold">+</span>
 							</div>
-							<div class="accordion__content">
+							<div class="accordion__content bg-white">
 								Ya, anda dapat memesan melalui aplikasi Gofood dan Shopeefood.
 							</div>
 						</div>
-						<div class="accordion__item">
-							<div class="accordion__header" onclick="toggleAccordion(this)">
+						<div class="mb-4 rounded overflow-hidden shadow-md">
+							<div class="accordion__header flex justify-between items-center p-6 bg-primary text-white cursor-pointer font-semibold transition-all duration-300 hover:bg-[#8a7862]" onclick="toggleAccordion(this)">
 								<span>Jenis kopi apa yang dijual?</span>
-								<span class="accordion__icon">+</span>
+								<span class="text-2xl font-bold">+</span>
 							</div>
-							<div class="accordion__content">Kopi blabla.</div>
+							<div class="accordion__content bg-white">Kopi blabla.</div>
 						</div>
-						<div class="accordion__item">
-							<div class="accordion__header" onclick="toggleAccordion(this)">
+						<div class="mb-4 rounded overflow-hidden shadow-md">
+							<div class="accordion__header flex justify-between items-center p-6 bg-primary text-white cursor-pointer font-semibold transition-all duration-300 hover:bg-[#8a7862]" onclick="toggleAccordion(this)">
 								<span>Apakah tersedia Wi-fi</span>
-								<span class="accordion__icon">+</span>
+								<span class="text-2xl font-bold">+</span>
 							</div>
-							<div class="accordion__content">Ya, ada Wi-fi gratis.</div>
+							<div class="accordion__content bg-white">Ya, ada Wi-fi gratis.</div>
 						</div>
-						<div class="accordion__item">
-							<div class="accordion__header" onclick="toggleAccordion(this)">
+						<div class="mb-4 rounded overflow-hidden shadow-md">
+							<div class="accordion__header flex justify-between items-center p-6 bg-primary text-white cursor-pointer font-semibold transition-all duration-300 hover:bg-[#8a7862]" onclick="toggleAccordion(this)">
 								<span>Metode pembayaran apa saja yang tersedia?</span>
-								<span class="accordion__icon">+</span>
+								<span class="text-2xl font-bold">+</span>
 							</div>
-							<div class="accordion__content">
+							<div class="accordion__content bg-white">
 								Pembayaran dapat dilakukan secara cash, melalui kartu
 								debit/kredit dan dompet digital.
 							</div>
 						</div>
-						<div class="accordion__item">
-							<div class="accordion__header" onclick="toggleAccordion(this)">
+						<div class="mb-4 rounded overflow-hidden shadow-md">
+							<div class="accordion__header flex justify-between items-center p-6 bg-primary text-white cursor-pointer font-semibold transition-all duration-300 hover:bg-[#8a7862]" onclick="toggleAccordion(this)">
 								<span>Pertanyaan selanjutnya?</span>
-								<span class="accordion__icon">+</span>
+								<span class="text-2xl font-bold">+</span>
 							</div>
-							<div class="accordion__content">Jawaban selanjutnya.</div>
+							<div class="accordion__content bg-white">Jawaban selanjutnya.</div>
 						</div>
-						<div class="accordion__item">
-							<div class="accordion__header" onclick="toggleAccordion(this)">
+						<div class="mb-4 rounded overflow-hidden shadow-md">
+							<div class="accordion__header flex justify-between items-center p-6 bg-primary text-white cursor-pointer font-semibold transition-all duration-300 hover:bg-[#8a7862]" onclick="toggleAccordion(this)">
 								<span>Pertanyaan selanjutnya?</span>
-								<span class="accordion__icon">+</span>
+								<span class="text-2xl font-bold">+</span>
 							</div>
-							<div class="accordion__content">Jawaban selanjutnya.</div>
+							<div class="accordion__content bg-white">Jawaban selanjutnya.</div>
 						</div>
 					</div>
 				</div>
 			</section>
 
 			<!--Adverstisement-->
-			<section id="advertisement">
-				<div class="container">
-					<h2 class="advertisement__title">Pilih Sesukamu</h2>
-					<div class="advertisement__container">
+			<section id="advertisement" class="bg-primary">
+				<div class="container mx-auto px-4">
+					<h2 class="text-center text-capitalize text-white py-8">Pilih Sesukamu</h2>
+					<div class="flex gap-2.5 justify-around">
 						<div class="swiper mySwiper">
 							<div class="swiper-wrapper">
 								<img
-									class="swiper-slide"
+									class="swiper-slide object-contain rounded mb-8"
 									src="./assets/images/1.png"
 									alt="LATTE"
 								/>
 								<img
-									class="swiper-slide"
+									class="swiper-slide object-contain rounded mb-8"
 									src="./assets/images/2.png"
 									alt="FRAPUCCINO"
 								/>
 								<img
-									class="swiper-slide"
+									class="swiper-slide object-contain rounded mb-8"
 									src="./assets/images/3.png"
 									alt="ESPRESSO"
 								/>
 								<img
-									class="swiper-slide"
+									class="swiper-slide object-contain rounded mb-8"
 									src="./assets/images/4.png"
 									alt="MOCHA"
 								/>
 								<img
-									class="swiper-slide"
+									class="swiper-slide object-contain rounded mb-8"
 									src="./assets/images/5.png"
 									alt="MACHIATO"
 								/>
 								<img
-									class="swiper-slide"
+									class="swiper-slide object-contain rounded mb-8"
 									src="./assets/images/6.png"
 									alt="AFFOGATO"
 								/>
 								<img
-									class="swiper-slide"
+									class="swiper-slide object-contain rounded mb-8"
 									src="./assets/images/7.png"
 									alt="WHITE FLAT"
 								/>
@@ -340,73 +376,65 @@
 			</section>
 
 			<!-- Footer -->
-			<footer class="footer">
-				<div class="container footer__container">
-					<div class="footer__content">
-						<div class="footer__brand">
-							<a href="#" class="footer__logo-link">
+			<footer class="py-16 pb-8 bg-primary text-white">
+				<div class="container mx-auto px-4 flex flex-col">
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+						<div class="flex flex-col gap-4">
+							<a href="#" class="block">
 								<img
 									src="./assets/images/coffee-logo.svg"
 									alt="Cohee logo"
-									class="footer__logo"
+									class="w-[4.5rem] mb-4"
 								/>
 							</a>
-							<p class="footer__description">
+							<p class="mb-6 leading-relaxed">
 								Crafting exceptional coffee experiences since 2010. Join us in
 								our passion for quality beans, expert brewing, and creating a
 								warm, welcoming community space.
 							</p>
-							<div class="footer__contact">
-								<a href="#" class="footer__contact-item"
-									>123 Eco Street, Green City</a
-								>
-								<a href="tel:+15555555555" class="footer__contact-item"
-									>+1 (555) 555-5555</a
-								>
-								<a
-									href="mailto:contact@comment.com"
-									class="footer__contact-item"
-									>contact@comment.com</a
-								>
+							<div class="flex flex-col gap-3">
+								<a href="#" class="text-white hover:text-secondary transition-all duration-300">123 Eco Street, Green City</a>
+								<a href="tel:+15555555555" class="text-white hover:text-secondary transition-all duration-300">+1 (555) 555-5555</a>
+								<a href="mailto:contact@comment.com" class="text-white hover:text-secondary transition-all duration-300">contact@comment.com</a>
 							</div>
 						</div>
-						<div class="footer__links">
-							<h3 class="footer__heading">Quick Links</h3>
-							<ul class="footer__list">
-								<li class="footer__item">
-									<a href="index.html" class="footer__link">Home</a>
+						<div>
+							<h3 class="text-2xl mb-2">Quick Links</h3>
+							<ul class="flex flex-col">
+								<li class="my-2">
+									<a href="index.html" class="text-white hover:text-secondary transition-all duration-300">Home</a>
 								</li>
-								<li class="footer__item">
-									<a href="about.html" class="footer__link">About</a>
+								<li class="my-2">
+									<a href="about.html" class="text-white hover:text-secondary transition-all duration-300">About</a>
 								</li>
-								<li class="footer__item">
-									<a href="blogs.html" class="footer__link">Blog</a>
+								<li class="my-2">
+									<a href="blogs.html" class="text-white hover:text-secondary transition-all duration-300">Blog</a>
 								</li>
 							</ul>
 						</div>
-						<div class="footer__social">
-							<h3 class="footer__heading">Social Media</h3>
-							<ul class="footer__list">
-								<li class="footer__item">
-									<a href="#" class="footer__link"
-										><i class="fab fa-instagram"></i> Instagram</a
-									>
+						<div>
+							<h3 class="text-2xl mb-2">Social Media</h3>
+							<ul class="flex flex-col">
+								<li class="my-2">
+									<a href="#" class="text-white hover:text-secondary transition-all duration-300">
+										<i class="fab fa-instagram"></i> Instagram
+									</a>
 								</li>
-								<li class="footer__item">
-									<a href="#" class="footer__link"
-										><i class="fab fa-facebook"></i> Facebook</a
-									>
+								<li class="my-2">
+									<a href="#" class="text-white hover:text-secondary transition-all duration-300">
+										<i class="fab fa-facebook"></i> Facebook
+									</a>
 								</li>
-								<li class="footer__item">
-									<a href="#" class="footer__link"
-										><i class="fab fa-linkedin"></i> LinkedIn</a
-									>
+								<li class="my-2">
+									<a href="#" class="text-white hover:text-secondary transition-all duration-300">
+										<i class="fab fa-linkedin"></i> LinkedIn
+									</a>
 								</li>
 							</ul>
 						</div>
 					</div>
-					<hr class="footer__divider" />
-					<div class="footer__copyright">
+					<hr class="my-6 border-none h-px bg-white/20" />
+					<div class="text-center text-sm opacity-80">
 						<p>Copyright &copy; 2025 Cohee. All rights reserved.</p>
 					</div>
 				</div>

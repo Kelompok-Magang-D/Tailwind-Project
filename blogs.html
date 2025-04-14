@@ -4,7 +4,36 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Cohee - Blogs</title>
-		<link rel="stylesheet" href="./assets/css/style.css" />
+		
+		<!-- Tailwind CSS CDN -->
+		<script src="https://cdn.tailwindcss.com"></script>
+		
+		<!-- Custom Tailwind Config -->
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							primary: '#433738',
+							secondary: '#c49b63',
+							cream: '#dfcda9',
+							white: '#f8f7f7',
+							black: '#000',
+							teal: '#3d8d7a',
+							accent: '#ff6600',
+						},
+						borderRadius: {
+							DEFAULT: '0.5rem',
+						},
+						fontFamily: {
+							'roboto': ['Roboto', 'sans-serif'],
+							'big-shoulders': ['"Big Shoulders"', 'sans-serif'],
+						},
+					}
+				}
+			}
+		</script>
+		
 		<script src="https://unpkg.com/feather-icons"></script>
 		<link
 			rel="stylesheet"
@@ -22,108 +51,110 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 		/>
+		
+		<link rel="stylesheet" href="./assets/css/style.css">
 	</head>
-	<body>
+	<body class="font-roboto leading-relaxed bg-primary text-black">
 		<main>
 			<!-- Navbar - Hendri -->
-			<header class="header">
-				<div class="container header__container">
-					<a href="" class="header__logo-link">
+			<header class="sticky top-0 z-50 w-full bg-primary shadow-md">
+				<div class="container mx-auto px-4 flex items-center justify-between h-16">
+					<a href="" class="block">
 						<img
 							src="./assets/images/coffee-logo.svg"
 							alt="Logo brand"
-							class="header__logo"
+							class="w-[4.5rem] h-auto"
 						/>
 					</a>
-					<nav class="navbar">
-						<a href="index.html" class="navbar__link">Home</a>
-						<a href="about.html" class="navbar__link">About</a>
-						<a href="blogs.html" class="navbar__link">Blog</a>
+					<nav class="hidden md:flex items-center gap-8">
+						<a href="index.html" class="text-lg font-medium text-white hover:text-secondary transition-all duration-300">Home</a>
+						<a href="about.html" class="text-lg font-medium text-white hover:text-secondary transition-all duration-300">About</a>
+						<a href="blogs.html" class="text-lg font-medium text-white hover:text-secondary transition-all duration-300">Blog</a>
 					</nav>
-					<div class="header__actions">
-						<button class="button button__contact">Contact Us</button>
-						<div class="hamburger">
-							<span class="bar"></span>
-							<span class="bar"></span>
-							<span class="bar"></span>
+					<div class="flex gap-4 items-center">
+						<button class="bg-teal text-white font-bold uppercase text-base px-5 py-3 rounded shadow-md hover:bg-white hover:text-black transition-all duration-300">Contact Us</button>
+						<div class="hamburger md:hidden cursor-pointer">
+							<span class="bar block w-[25px] h-[3px] my-[5px] mx-auto bg-white transition-all duration-300"></span>
+							<span class="bar block w-[25px] h-[3px] my-[5px] mx-auto bg-white transition-all duration-300"></span>
+							<span class="bar block w-[25px] h-[3px] my-[5px] mx-auto bg-white transition-all duration-300"></span>
 						</div>
-						<div class="hamburger__menu">
-							<a href="index.html" class="hamburger__link">Home</a>
-							<a href="about.html" class="hamburger__link">About</a>
-							<a href="blogs.html" class="hamburger__link">Blog</a>
+						<div class="hamburger__menu fixed left-[-100%] top-16 flex-col bg-primary w-full text-center transition-all duration-300 shadow-lg py-8 z-[99]">
+							<a href="index.html" class="block py-6 text-white text-xl hover:text-secondary transition-all duration-300">Home</a>
+							<a href="about.html" class="block py-6 text-white text-xl hover:text-secondary transition-all duration-300">About</a>
+							<a href="blogs.html" class="block py-6 text-white text-xl hover:text-secondary transition-all duration-300">Blog</a>
 						</div>
 					</div>
 				</div>
 			</header>
 
-			<section id="blogs">
-				<div class="container">
-					<div class="blogs__header">
-						<h2 class="blogs__title">Our Blog</h2>
-						<p class="blogs__description">
+			<section id="blogs" class="py-8 md:py-12 bg-white">
+				<div class="container mx-auto px-4">
+					<div class="flex flex-col items-center text-center mb-12">
+						<h2 class="text-3xl md:text-4xl font-bold mb-4 text-primary">Our Blog</h2>
+						<p class="text-lg md:text-xl max-w-3xl">
 							Discover the world of coffee through our expert insights, brewing
 							guides, and stories from our coffee community. Stay updated with
 							the latest trends and tips.
 						</p>
 					</div>
-					<div class="blogs__content">
-						<div class="blogs__card">
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+						<div class="flex flex-col rounded overflow-hidden bg-primary shadow-md h-full">
 							<img
 								src="https://images.unsplash.com/photo-1511920170033-f8396924c348"
 								alt="Coffee Brewing"
-								class="blogs__card-image"
+								class="w-full h-[200px] object-cover"
 							/>
-							<div class="blogs__card-content">
-								<h1 class="blogs__card-title">The Art of Coffee Brewing</h1>
-								<p class="blogs__card-description">
+							<div class="flex flex-col flex-grow p-6">
+								<h1 class="text-xl font-bold mb-2 text-white flex-grow">The Art of Coffee Brewing</h1>
+								<p class="text-white mb-4 line-clamp-2">
 									Discover the secrets to brewing the perfect cup of coffee at
 									home. From choosing beans to mastering techniques.
 								</p>
 								<button
 									onclick="window.location.href='detail.html'"
-									class="blogs__card-link"
+									class="w-full py-3 px-4 bg-cream text-black font-medium rounded hover:bg-white transition-all duration-300"
 								>
 									Read More
 								</button>
 							</div>
 						</div>
-						<div class="blogs__card">
+						<div class="flex flex-col rounded overflow-hidden bg-primary shadow-md h-full">
 							<img
 								src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
 								alt="Coffee Types"
-								class="blogs__card-image"
+								class="w-full h-[200px] object-cover"
 							/>
-							<div class="blogs__card-content">
-								<h3 class="blogs__card-title">
+							<div class="flex flex-col flex-grow p-6">
+								<h3 class="text-xl font-bold mb-2 text-white flex-grow">
 									Understanding Coffee Bean Origins
 								</h3>
-								<p class="blogs__card-description">
+								<p class="text-white mb-4 line-clamp-2">
 									Explore different coffee regions and how their unique climates
 									affect the taste of your favorite brew.
 								</p>
 								<button
 									onclick="window.location.href='detail.html'"
-									class="blogs__card-link"
+									class="w-full py-3 px-4 bg-cream text-black font-medium rounded hover:bg-white transition-all duration-300"
 								>
 									Read More
 								</button>
 							</div>
 						</div>
-						<div class="blogs__card">
+						<div class="flex flex-col rounded overflow-hidden bg-primary shadow-md h-full">
 							<img
 								src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735"
 								alt="Coffee Shop"
-								class="blogs__card-image"
+								class="w-full h-[200px] object-cover"
 							/>
-							<div class="blogs__card-content">
-								<h3 class="blogs__card-title">Starting Your Own Coffee Shop</h3>
-								<p class="blogs__card-description">
+							<div class="flex flex-col flex-grow p-6">
+								<h3 class="text-xl font-bold mb-2 text-white flex-grow">Starting Your Own Coffee Shop</h3>
+								<p class="text-white mb-4 line-clamp-2">
 									Essential tips and insights for entrepreneurs looking to open
 									their own successful coffee business.
 								</p>
 								<button
 									onclick="window.location.href='detail.html'"
-									class="blogs__card-link"
+									class="w-full py-3 px-4 bg-cream text-black font-medium rounded hover:bg-white transition-all duration-300"
 								>
 									Read More
 								</button>
@@ -134,79 +165,72 @@
 			</section>
 
 			<!-- Footer -->
-			<footer class="footer">
-				<div class="container footer__container">
-					<div class="footer__content">
-						<div class="footer__brand">
-							<a href="#" class="footer__logo-link">
+			<footer class="py-16 pb-8 bg-primary text-white">
+				<div class="container mx-auto px-4 flex flex-col">
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+						<div class="flex flex-col gap-4">
+							<a href="#" class="block">
 								<img
 									src="./assets/images/coffee-logo.svg"
 									alt="Cohee logo"
-									class="footer__logo"
+									class="w-[4.5rem] mb-4"
 								/>
 							</a>
-							<p class="footer__description">
-								Crafting exceptional coffee experiences since 2010. Join us in
-								our passion for quality beans, expert brewing, and creating a
-								warm, welcoming community space.
+							<p class="mb-6 leading-relaxed">
+								Crafting exceptional coffee experiences since 2010. Join us in our passion for quality beans, expert brewing, and creating a warm, welcoming community space.
 							</p>
-							<div class="footer__contact">
-								<a href="#" class="footer__contact-item"
-									>123 Eco Street, Green City</a
-								>
-								<a href="tel:+15555555555" class="footer__contact-item"
-									>+1 (555) 555-5555</a
-								>
-								<a
-									href="mailto:contact@comment.com"
-									class="footer__contact-item"
-									>contact@comment.com</a
-								>
+							<div class="flex flex-col gap-3">
+								<a href="#" class="text-white hover:text-secondary transition-all duration-300">123 Eco Street, Green City</a>
+								<a href="tel:+15555555555" class="text-white hover:text-secondary transition-all duration-300">+1 (555) 555-5555</a>
+								<a href="mailto:contact@comment.com" class="text-white hover:text-secondary transition-all duration-300">contact@comment.com</a>
 							</div>
 						</div>
-						<div class="footer__links">
-							<h3 class="footer__heading">Quick Links</h3>
-							<ul class="footer__list">
-								<li class="footer__item">
-									<a href="index.html" class="footer__link">Home</a>
+						<div>
+							<h3 class="text-2xl mb-2">Quick Links</h3>
+							<ul class="flex flex-col">
+								<li class="my-2">
+									<a href="index.html" class="text-white hover:text-secondary transition-all duration-300">Home</a>
 								</li>
-								<li class="footer__item">
-									<a href="about.html" class="footer__link">About</a>
+								<li class="my-2">
+									<a href="about.html" class="text-white hover:text-secondary transition-all duration-300">About</a>
 								</li>
-								<li class="footer__item">
-									<a href="#" class="footer__link">Blog</a>
+								<li class="my-2">
+									<a href="#" class="text-white hover:text-secondary transition-all duration-300">Blog</a>
 								</li>
 							</ul>
 						</div>
-						<div class="footer__social">
-							<h3 class="footer__heading">Social Media</h3>
-							<ul class="footer__list">
-								<li class="footer__item">
-									<a href="#" class="footer__link"
-										><i class="fab fa-instagram"></i> Instagram</a
-									>
+						<div>
+							<h3 class="text-2xl mb-2">Social Media</h3>
+							<ul class="flex flex-col">
+								<li class="my-2">
+									<a href="#" class="text-white hover:text-secondary transition-all duration-300">
+										<i class="fab fa-instagram"></i> Instagram
+									</a>
 								</li>
-								<li class="footer__item">
-									<a href="#" class="footer__link"
-										><i class="fab fa-facebook"></i> Facebook</a
-									>
+								<li class="my-2">
+									<a href="#" class="text-white hover:text-secondary transition-all duration-300">
+										<i class="fab fa-facebook"></i> Facebook
+									</a>
 								</li>
-								<li class="footer__item">
-									<a href="#" class="footer__link"
-										><i class="fab fa-linkedin"></i> LinkedIn</a
-									>
+								<li class="my-2">
+									<a href="#" class="text-white hover:text-secondary transition-all duration-300">
+										<i class="fab fa-linkedin"></i> LinkedIn
+									</a>
 								</li>
 							</ul>
 						</div>
 					</div>
-					<hr class="footer__divider" />
-					<div class="footer__copyright">
+					<hr class="my-6 border-none h-px bg-white/20" />
+					<div class="text-center text-sm opacity-80">
 						<p>Copyright &copy; 2025 Cohee. All rights reserved.</p>
 					</div>
 				</div>
 			</footer>
 		</main>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script>
+			feather.replace();
+		</script>
 		<script src="./assets/js/script.js"></script>
 		<script src="./assets/js/hamburger.js"></script>
 	</body>

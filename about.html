@@ -4,47 +4,88 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Cohee - About Us</title>
-		<link rel="stylesheet" href="./assets/css/style.css" />
+		
+		<!-- Tailwind CSS CDN -->
+		<script src="https://cdn.tailwindcss.com"></script>
+		
+		<!-- Custom Tailwind Config -->
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							primary: '#433738',
+							secondary: '#c49b63',
+							cream: '#dfcda9',
+							white: '#f8f7f7',
+							black: '#000',
+							teal: '#3d8d7a',
+							accent: '#ff6600',
+						},
+						borderRadius: {
+							DEFAULT: '0.5rem',
+						},
+						fontFamily: {
+							'roboto': ['Roboto', 'sans-serif'],
+							'big-shoulders': ['"Big Shoulders"', 'sans-serif'],
+						},
+					}
+				}
+			}
+		</script>
+		
+		<script src="https://unpkg.com/feather-icons"></script>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./assets/css/style.css">
 	</head>
-	<body>
+	<body class="font-roboto leading-relaxed bg-primary text-black">
 		<main>
 			<!-- Navbar - Hendri -->
-			<header class="header">
-				<div class="container header__container">
-					<a href="" class="header__logo-link">
+			<header class="sticky top-0 z-50 w-full bg-primary shadow-md">
+				<div class="container mx-auto px-4 flex items-center justify-between h-16">
+					<a href="" class="block">
 						<img
 							src="./assets/images/coffee-logo.svg"
 							alt="Logo brand"
-							class="header__logo"
+							class="w-[4.5rem] h-auto"
 						/>
 					</a>
-					<nav class="navbar">
-						<a href="index.html" class="navbar__link">Home</a>
-						<a href="#about" class="navbar__link">About</a>
-						<a href="blogs.html" class="navbar__link">Blog</a>
+					<nav class="hidden md:flex items-center gap-8">
+						<a href="index.html" class="text-lg font-medium text-white hover:text-secondary transition-all duration-300">Home</a>
+						<a href="#about" class="text-lg font-medium text-white hover:text-secondary transition-all duration-300">About</a>
+						<a href="blogs.html" class="text-lg font-medium text-white hover:text-secondary transition-all duration-300">Blog</a>
 					</nav>
-					<div class="header__actions">
-						<button class="button button__contact">Contact Us</button>
-						<div class="hamburger">
-							<span class="bar"></span>
-							<span class="bar"></span>
-							<span class="bar"></span>
+					<div class="flex gap-4 items-center">
+						<button class="bg-teal text-white font-bold uppercase text-base px-5 py-3 rounded shadow-md hover:bg-white hover:text-black transition-all duration-300">Contact Us</button>
+						<div class="hamburger md:hidden cursor-pointer">
+							<span class="bar block w-[25px] h-[3px] my-[5px] mx-auto bg-white transition-all duration-300"></span>
+							<span class="bar block w-[25px] h-[3px] my-[5px] mx-auto bg-white transition-all duration-300"></span>
+							<span class="bar block w-[25px] h-[3px] my-[5px] mx-auto bg-white transition-all duration-300"></span>
 						</div>
-						<div class="hamburger__menu">
-							<a href="index.html" class="hamburger__link">Home</a>
-							<a href="#about" class="hamburger__link">About</a>
-							<a href="blogs.html" class="hamburger__link">Blog</a>
+						<div class="hamburger__menu fixed left-[-100%] top-16 flex-col bg-primary w-full text-center transition-all duration-300 shadow-lg py-8 z-[99]">
+							<a href="index.html" class="block py-6 text-white text-xl hover:text-secondary transition-all duration-300">Home</a>
+							<a href="#about" class="block py-6 text-white text-xl hover:text-secondary transition-all duration-300">About</a>
+							<a href="blogs.html" class="block py-6 text-white text-xl hover:text-secondary transition-all duration-300">Blog</a>
 						</div>
 					</div>
 				</div>
 			</header>
 
 			<!-- About Hero Section -->
-			<section class="about-hero">
-				<div class="container">
-					<div class="about-hero-content">
-						<h1>About Cohee</h1>
-						<p>
+			<section class="py-16 bg-primary text-white">
+				<div class="container mx-auto px-4">
+					<div class="max-w-3xl mx-auto text-center">
+						<h1 class="text-4xl md:text-5xl lg:text-6xl mb-4 font-bold">About Cohee</h1>
+						<p class="text-xl font-bold leading-relaxed">
 							We're passionate about sharing the perfect cup of coffee with our
 							community through quality, sustainability, and exceptional
 							service.
@@ -54,12 +95,12 @@
 			</section>
 
 			<!-- About History Section -->
-			<section class="about-section">
-				<div class="container">
-					<div class="about-history">
-						<div class="about-text">
-							<h2>Our History, Mission & Values</h2>
-							<p>
+			<section class="py-16 bg-white">
+				<div class="container mx-auto px-4">
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+						<div class="md:order-1 order-2">
+							<h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary">Our History, Mission & Values</h2>
+							<p class="text-lg leading-relaxed">
 								Founded in 2010, Cohee started as a small coffee cart with a big
 								dream. Our mission is to provide exceptional coffee experiences
 								while supporting sustainable farming practices and building
@@ -69,7 +110,7 @@
 						</div>
 
 						<img
-							class="history__image"
+							class="w-full h-auto rounded shadow-md md:order-2 order-1"
 							src="./assets/images/history-coffee.jpg"
 							alt="Cohee coffee shop history"
 						/>
@@ -78,54 +119,54 @@
 			</section>
 
 			<!-- Team Section -->
-			<section class="team-section">
-				<div class="container">
-					<h2>Our Team</h2>
-					<p>Meet the passionate coffee experts behind Cohee.</p>
+			<section class="py-16 bg-primary text-white text-center">
+				<div class="container mx-auto px-4">
+					<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Our Team</h2>
+					<p class="text-xl mb-12">Meet the passionate coffee experts behind Cohee.</p>
 
-					<div class="team-grid">
-						<div class="team-member">
-							<img src="https://i.pravatar.cc/150?u=1" alt="Team member" />
-							<h3>Maria Johnson</h3>
-							<h4>Founder & Head Barista</h4>
-							<p>
+					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+						<div class="flex flex-col items-center">
+							<img src="https://i.pravatar.cc/150?u=1" alt="Team member" class="w-[150px] h-[150px] rounded-full object-cover border-3 border-white mb-4" />
+							<h3 class="text-2xl font-semibold mb-1 text-white">Maria Johnson</h3>
+							<h4 class="text-lg mb-2 text-secondary">Founder & Head Barista</h4>
+							<p class="mb-4">
 								Coffee enthusiast with 15 years of experience in specialty
 								brews.
 							</p>
-							<div class="social-links">
-								<a href="#"><i class="fab fa-linkedin"></i></a>
-								<a href="#"><i class="fab fa-twitter"></i></a>
-								<a href="#"><i class="fab fa-instagram"></i></a>
+							<div class="flex gap-4">
+								<a href="#" class="text-white hover:text-secondary transition-all duration-300"><i class="fab fa-linkedin text-xl"></i></a>
+								<a href="#" class="text-white hover:text-secondary transition-all duration-300"><i class="fab fa-twitter text-xl"></i></a>
+								<a href="#" class="text-white hover:text-secondary transition-all duration-300"><i class="fab fa-instagram text-xl"></i></a>
 							</div>
 						</div>
 
-						<div class="team-member">
-							<img src="https://i.pravatar.cc/150?u=2" alt="Team member" />
-							<h3>David Chen</h3>
-							<h4>Master Roaster</h4>
-							<p>
+						<div class="flex flex-col items-center">
+							<img src="https://i.pravatar.cc/150?u=2" alt="Team member" class="w-[150px] h-[150px] rounded-full object-cover border-3 border-white mb-4" />
+							<h3 class="text-2xl font-semibold mb-1 text-white">David Chen</h3>
+							<h4 class="text-lg mb-2 text-secondary">Master Roaster</h4>
+							<p class="mb-4">
 								Expert in sourcing and roasting the finest coffee beans from
 								around the world.
 							</p>
-							<div class="social-links">
-								<a href="#"><i class="fab fa-linkedin"></i></a>
-								<a href="#"><i class="fab fa-twitter"></i></a>
-								<a href="#"><i class="fab fa-instagram"></i></a>
+							<div class="flex gap-4">
+								<a href="#" class="text-white hover:text-secondary transition-all duration-300"><i class="fab fa-linkedin text-xl"></i></a>
+								<a href="#" class="text-white hover:text-secondary transition-all duration-300"><i class="fab fa-twitter text-xl"></i></a>
+								<a href="#" class="text-white hover:text-secondary transition-all duration-300"><i class="fab fa-instagram text-xl"></i></a>
 							</div>
 						</div>
 
-						<div class="team-member">
-							<img src="https://i.pravatar.cc/150?u=3m" alt="Team member" />
-							<h3>Sarah Kim</h3>
-							<h4>Pastry Chef</h4>
-							<p>
+						<div class="flex flex-col items-center">
+							<img src="https://i.pravatar.cc/150?u=3m" alt="Team member" class="w-[150px] h-[150px] rounded-full object-cover border-3 border-white mb-4" />
+							<h3 class="text-2xl font-semibold mb-1 text-white">Sarah Kim</h3>
+							<h4 class="text-lg mb-2 text-secondary">Pastry Chef</h4>
+							<p class="mb-4">
 								Creates delicious pastries that perfectly complement our coffee
 								selection.
 							</p>
-							<div class="social-links">
-								<a href="#"><i class="fab fa-linkedin"></i></a>
-								<a href="#"><i class="fab fa-twitter"></i></a>
-								<a href="#"><i class="fab fa-instagram"></i></a>
+							<div class="flex gap-4">
+								<a href="#" class="text-white hover:text-secondary transition-all duration-300"><i class="fab fa-linkedin text-xl"></i></a>
+								<a href="#" class="text-white hover:text-secondary transition-all duration-300"><i class="fab fa-twitter text-xl"></i></a>
+								<a href="#" class="text-white hover:text-secondary transition-all duration-300"><i class="fab fa-instagram text-xl"></i></a>
 							</div>
 						</div>
 					</div>
@@ -133,23 +174,24 @@
 			</section>
 
 			<!-- Gallery Section -->
-			<section class="about-section">
-				<div class="container">
-					<div class="gallery-section">
-						<h2 class="gallery-title">Coffee Gallery</h2>
+			<section class="py-16 bg-white">
+				<div class="container mx-auto px-4">
+					<div>
+						<h2 class="text-3xl md:text-4xl font-bold mb-8 text-primary text-center">Coffee Gallery</h2>
 
-						<div class="gallery-grid">
-							<div class="gallery-item gallery-item--large">
-								<img src="./assets/images/gallery-1.jpg" alt="Coffee brewing" />
+						<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+							<div class="relative h-[250px] overflow-hidden rounded group">
+								<img src="./assets/images/gallery-1.jpg" alt="Coffee brewing" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
 							</div>
-							<div class="gallery-item gallery-item--small">
+							<div class="relative h-[250px] overflow-hidden rounded group">
 								<img
 									src="./assets/images/gallery-2.jpg"
 									alt="Coffee shop interior"
+									class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
 								/>
 							</div>
-							<div class="gallery-item gallery-item--small">
-								<img src="./assets/images/gallery-3.jpg" alt="Coffee art" />
+							<div class="relative h-[250px] overflow-hidden rounded group">
+								<img src="./assets/images/gallery-3.jpg" alt="Coffee art" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
 							</div>
 						</div>
 					</div>
@@ -157,109 +199,99 @@
 			</section>
 
 			<!-- Stats Section -->
-			<section class="about-section">
-				<div class="container">
-					<div class="stats-section">
-						<div class="stats-content">
-							<h2>Pertumbuhan Cohee di Indonesia</h2>
-							<p class="stats-description">
+			<section class="py-16 bg-white">
+				<div class="container mx-auto px-4">
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+						<div>
+							<h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary">Pertumbuhan Cohee di Indonesia</h2>
+							<p class="text-lg mb-8 leading-relaxed">
 								Cohee telah mengalami pertumbuhan yang signifikan sejak
 								diluncurkan. Dengan lebih dari 2 juta pelanggan setia, kami
 								terus memperluas layanan kami untuk memenuhi kebutuhan pecinta
 								kopi.
 							</p>
-							<div class="stats-figures">
-								<div class="stat-item">
-									<h3>80%</h3>
-									<p>Pelanggan merasa puas dengan layanan kami</p>
+							<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+								<div>
+									<h3 class="text-4xl md:text-5xl font-bold mb-2 text-primary">80%</h3>
+									<p class="text-lg">Pelanggan merasa puas dengan layanan kami</p>
 								</div>
-								<div class="stat-item">
-									<h3>70%</h3>
-									<p>Pengguna baru bergabung setiap bulannya</p>
+								<div>
+									<h3 class="text-4xl md:text-5xl font-bold mb-2 text-primary">70%</h3>
+									<p class="text-lg">Pengguna baru bergabung setiap bulannya</p>
 								</div>
 							</div>
 						</div>
-						<div class="video-container">
-							<iframe
-								class="video-embed"
-								width="600"
-								height="300"
-								src="https://www.youtube.com/embed/xQ156y4TtJs"
-							>
-							</iframe>
+						<div class="flex justify-center">
+							<div class="w-full rounded overflow-hidden">
+								<iframe
+									class="w-full aspect-video"
+									src="https://www.youtube.com/embed/xQ156y4TtJs"
+								>
+								</iframe>
+							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 
 			<!-- Footer -->
-			<footer class="footer">
-				<div class="container footer__container">
-					<div class="footer__content">
-						<div class="footer__brand">
-							<a href="#" class="footer__logo-link">
+			<footer class="py-16 pb-8 bg-primary text-white">
+				<div class="container mx-auto px-4 flex flex-col">
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+						<div class="flex flex-col gap-4">
+							<a href="#" class="block">
 								<img
 									src="./assets/images/coffee-logo.svg"
 									alt="Cohee logo"
-									class="footer__logo"
+									class="w-[4.5rem] mb-4"
 								/>
 							</a>
-							<p class="footer__description">
-								Crafting exceptional coffee experiences since 2010. Join us in
-								our passion for quality beans, expert brewing, and creating a
-								warm, welcoming community space.
+							<p class="mb-6 leading-relaxed">
+								Crafting exceptional coffee experiences since 2010. Join us in our passion for quality beans, expert brewing, and creating a warm, welcoming community space.
 							</p>
-							<div class="footer__contact">
-								<a href="#" class="footer__contact-item"
-									>123 Eco Street, Green City</a
-								>
-								<a href="tel:+15555555555" class="footer__contact-item"
-									>+1 (555) 555-5555</a
-								>
-								<a
-									href="mailto:contact@comment.com"
-									class="footer__contact-item"
-									>contact@comment.com</a
-								>
+							<div class="flex flex-col gap-3">
+								<a href="#" class="text-white hover:text-secondary transition-all duration-300">123 Eco Street, Green City</a>
+								<a href="tel:+15555555555" class="text-white hover:text-secondary transition-all duration-300">+1 (555) 555-5555</a>
+								<a href="mailto:contact@comment.com" class="text-white hover:text-secondary transition-all duration-300">contact@comment.com</a>
 							</div>
 						</div>
-						<div class="footer__links">
-							<h3 class="footer__heading">Quick Links</h3>
-							<ul class="footer__list">
-								<li class="footer__item">
-									<a href="index.html" class="footer__link">Home</a>
+						<div>
+							<h3 class="text-2xl mb-2">Quick Links</h3>
+							<ul class="flex flex-col">
+								<li class="my-2">
+									<a href="index.html" class="text-white hover:text-secondary transition-all duration-300">Home</a>
 								</li>
-								<li class="footer__item">
-									<a href="#" class="footer__link">About</a>
+								<li class="my-2">
+									<a href="#" class="text-white hover:text-secondary transition-all duration-300">About</a>
 								</li>
-								<li class="footer__item">
-									<a href="#" class="footer__link">Blog</a>
+								<li class="my-2">
+									<a href="#" class="text-white hover:text-secondary transition-all duration-300">Blog</a>
 								</li>
 							</ul>
 						</div>
-						<div class="footer__social">
-							<h3 class="footer__heading">Social Media</h3>
-							<ul class="footer__list">
-								<li class="footer__item">
-									<a href="#" class="footer__link"
-										><i class="fab fa-instagram"></i> Instagram</a
-									>
+						<div>
+							<h3 class="text-2xl mb-2">Social Media</h3>
+							<ul class="flex flex-col">
+								<li class="my-2">
+									<a href="#" class="text-white hover:text-secondary transition-all duration-300">
+										<i class="fab fa-instagram"></i> Instagram
+									</a>
 								</li>
-								<li class="footer__item">
-									<a href="#" class="footer__link"
-										><i class="fab fa-facebook"></i> Facebook</a
-									>
+								<li class="my-2">
+									<a href="#" class="text-white hover:text-secondary transition-all duration-300">
+										<i class="fab fa-facebook"></i> Facebook
+									</a>
 								</li>
-								<li class="footer__item">
-									<a href="#" class="footer__link"
-										><i class="fab fa-linkedin"></i> LinkedIn</a
-									>
+								<li class="my-2">
+									<a href="#" class="text-white hover:text-secondary transition-all duration-300">
+										<i class="fab fa-linkedin"></i> LinkedIn
+									</a>
 								</li>
 							</ul>
 						</div>
 					</div>
-					<hr class="footer__divider" />
-					<div class="footer__copyright">
+					<hr class="my-6 border-none h-px bg-white/20" />
+					<div class="text-center text-sm opacity-80">
 						<p>Copyright &copy; 2025 Cohee. All rights reserved.</p>
 					</div>
 				</div>
