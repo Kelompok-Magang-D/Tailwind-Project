@@ -1,0 +1,38 @@
+.accordion__content {
+	transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+	max-height: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.accordion__content.active {
+	max-height: 500px; /* Adjust as needed */
+	padding-top: 1.25rem; /* Corresponds to p-5 */
+	padding-bottom: 1.25rem; /* Corresponds to p-5 */
+}
+.accordion__header .icon.rotate-180 {
+	transform: rotate(180deg);
+}
+
+.hamburger .bar {
+	transition: all 0.3s ease-in-out;
+}
+
+.hamburger.active .bar:nth-child(1) {
+	transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+	opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+	transform: translateY(-8px) rotate(-45deg);
+}
+
+.hamburger__menu {
+	transition: left 0.3s ease-in-out;
+}
+
+.hamburger__menu.active {
+	left: 0;
+}
