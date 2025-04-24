@@ -1,39 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Cohee - Detail</title>
-		
+
 		<!-- Tailwind CSS CDN -->
 		<script src="https://cdn.tailwindcss.com"></script>
-		
+
 		<!-- Custom Tailwind Config -->
 		<script>
 			tailwind.config = {
 				theme: {
 					extend: {
 						colors: {
-							primary: '#433738',
-							secondary: '#c49b63',
-							cream: '#dfcda9',
-							white: '#f8f7f7',
-							black: '#000',
-							teal: '#3d8d7a',
-							accent: '#ff6600',
+							primary: "#433738",
+							secondary: "#c49b63",
+							cream: "#dfcda9",
+							white: "#f8f7f7",
+							black: "#000",
+							teal: "#3d8d7a",
+							accent: "#ff6600",
 						},
 						borderRadius: {
-							DEFAULT: '0.5rem',
+							DEFAULT: "0.5rem",
 						},
 						fontFamily: {
-							'big-shoulders': ['"Big Shoulders"', 'sans-serif'],
-							'roboto': ['Roboto', 'sans-serif'],
+							"big-shoulders": ['"Big Shoulders"', "sans-serif"],
+							roboto: ["Roboto", "sans-serif"],
 						},
-					}
-				}
-			}
+					},
+				},
+			};
 		</script>
-		
+
 		<script src="https://unpkg.com/feather-icons"></script>
 		<link
 			rel="stylesheet"
@@ -45,7 +45,7 @@
 			href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="./assets/css/style.css">
+		<!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
 
 		<!-- swiper js -->
 		<link
@@ -57,7 +57,9 @@
 		<main>
 			<!-- Navbar - Hendri -->
 			<header class="sticky top-0 z-50 w-full bg-primary shadow-md">
-				<div class="container mx-auto px-4 flex items-center justify-between h-16">
+				<div
+					class="container mx-auto px-4 flex items-center justify-between h-16"
+				>
 					<a href="" class="block">
 						<img
 							src="./assets/images/coffee-logo.svg"
@@ -66,31 +68,73 @@
 						/>
 					</a>
 					<nav class="hidden md:flex items-center gap-8">
-						<a href="index.html" class="text-lg font-medium text-white hover:text-secondary transition-all duration-300">Home</a>
-						<a href="about.html" class="text-lg font-medium text-white hover:text-secondary transition-all duration-300">About</a>
-						<a href="blogs.html" class="text-lg font-medium text-white hover:text-secondary transition-all duration-300">Blog</a>
+						<a
+							href="index.html"
+							class="text-lg font-medium text-white hover:text-secondary transition-all duration-300"
+							>Home</a
+						>
+						<a
+							href="about.html"
+							class="text-lg font-medium text-white hover:text-secondary transition-all duration-300"
+							>About</a
+						>
+						<a
+							href="blogs.html"
+							class="text-lg font-medium text-white hover:text-secondary transition-all duration-300"
+							>Blog</a
+						>
 					</nav>
 					<div class="flex gap-4 items-center">
-						<button class="bg-teal text-white font-bold uppercase text-base px-5 py-3 rounded shadow-md hover:bg-white hover:text-black transition-all duration-300">Contact Us</button>
+						<button
+							class="bg-teal text-white font-bold uppercase text-base px-5 py-3 rounded shadow-md hover:bg-white hover:text-black transition-all duration-300"
+						>
+							Contact Us
+						</button>
 						<div class="hamburger md:hidden cursor-pointer">
-							<span class="bar block w-[25px] h-[3px] my-[5px] mx-auto bg-white transition-all duration-300"></span>
-							<span class="bar block w-[25px] h-[3px] my-[5px] mx-auto bg-white transition-all duration-300"></span>
-							<span class="bar block w-[25px] h-[3px] my-[5px] mx-auto bg-white transition-all duration-300"></span>
+							<span
+								class="bar block w-[25px] h-[3px] my-[5px] mx-auto bg-white transition-all duration-300"
+							></span>
+							<span
+								class="bar block w-[25px] h-[3px] my-[5px] mx-auto bg-white transition-all duration-300"
+							></span>
+							<span
+								class="bar block w-[25px] h-[3px] my-[5px] mx-auto bg-white transition-all duration-300"
+							></span>
 						</div>
-						<div class="hamburger__menu fixed left-[-100%] top-16 flex-col bg-primary w-full text-center transition-all duration-300 shadow-lg py-8 z-[99]">
-							<a href="index.html" class="block py-6 text-white text-xl hover:text-secondary transition-all duration-300">Home</a>
-							<a href="about.html" class="block py-6 text-white text-xl hover:text-secondary transition-all duration-300">About</a>
-							<a href="blogs.html" class="block py-6 text-white text-xl hover:text-secondary transition-all duration-300">Blog</a>
+						<div
+							class="hamburger__menu fixed left-[-100%] top-16 flex-col bg-primary w-full text-center transition-all duration-300 shadow-lg py-8 z-[99]"
+						>
+							<a
+								href="index.html"
+								class="block py-6 text-white text-xl hover:text-secondary transition-all duration-300"
+								>Home</a
+							>
+							<a
+								href="about.html"
+								class="block py-6 text-white text-xl hover:text-secondary transition-all duration-300"
+								>About</a
+							>
+							<a
+								href="blogs.html"
+								class="block py-6 text-white text-xl hover:text-secondary transition-all duration-300"
+								>Blog</a
+							>
 						</div>
 					</div>
 				</div>
 			</header>
-			
+
 			<!-- Header Section -->
 			<section id="detail__header" class="relative px-[5%] py-16">
 				<div class="relative z-10 max-w-[32rem] text-center mx-auto">
-					<h1 class="mb-5 text-2xl md:text-3xl lg:text-4xl font-bold text-white">Starting Your Own Coffee Shop</h1>
-					<div class="mt-8 md:mt-12 flex flex-wrap items-center justify-center gap-4">
+					<h1
+						class="mb-5 text-2xl md:text-3xl lg:text-4xl font-bold text-white"
+					>
+						Starting Your Own Coffee Shop
+					</h1>
+					<div
+						class="mt-8 md:mt-12 flex flex-wrap items-center justify-center gap-4"
+					>
 						<div class="flex flex-col items-center">
 							<div class="mb-3">
 								<img
@@ -119,13 +163,17 @@
 					<div class="absolute inset-0 bg-black/50"></div>
 				</div>
 			</section>
-			
+
 			<!-- Body Section -->
 			<section id="detail__body" class="bg-white py-8 md:py-12 lg:py-16">
 				<div class="container mx-auto px-4">
-					<div class="grid grid-cols-1 lg:grid-cols-[1fr_0.5fr] gap-8 lg:gap-20">
+					<div
+						class="grid grid-cols-1 lg:grid-cols-[1fr_0.5fr] gap-8 lg:gap-20"
+					>
 						<div class="text-base md:text-lg lg:text-xl leading-7">
-							<h3 class="text-xl md:text-2xl font-bold mb-4 text-primary">Introduction</h3>
+							<h3 class="text-xl md:text-2xl font-bold mb-4 text-primary">
+								Introduction
+							</h3>
 							<p class="mb-6">
 								Starting a coffee shop is an exciting venture that combines
 								passion for coffee with entrepreneurial spirit. Whether you're a
@@ -147,7 +195,9 @@
 									alt="Relume placeholder image"
 									class="w-full rounded"
 								/>
-								<figcaption class="text-center text-sm text-gray-600 mt-2">Image caption goes here</figcaption>
+								<figcaption class="text-center text-sm text-gray-600 mt-2">
+									Image caption goes here
+								</figcaption>
 							</figure>
 							<h6 class="text-lg font-semibold mt-6 mb-4">
 								The foundation of any successful coffee shop lies in three key
@@ -164,7 +214,9 @@
 								personality while providing comfort and functionality for your
 								customers and staff.
 							</p>
-							<blockquote class="italic py-4 px-8 my-6 border-l-4 border-primary bg-[rgba(167,146,119,0.1)]">
+							<blockquote
+								class="italic py-4 px-8 my-6 border-l-4 border-primary bg-[rgba(167,146,119,0.1)]"
+							>
 								&quot;The secret to a successful coffee shop isn't just about
 								serving great coffee - it's about creating an experience that
 								makes people want to become part of your coffee community.&quot;
@@ -178,7 +230,9 @@
 								online presence through social media and a user-friendly
 								website.
 							</p>
-							<h4 class="text-lg md:text-xl font-bold mb-4 text-primary">Conclusion</h4>
+							<h4 class="text-lg md:text-xl font-bold mb-4 text-primary">
+								Conclusion
+							</h4>
 							<p class="mb-6">
 								Starting a coffee shop requires dedication, passion, and careful
 								planning. Focus on quality in every aspect of your business,
@@ -200,29 +254,41 @@
 						</div>
 						<div class="mb-8">
 							<div class="overflow-hidden bg-white text-black">
-								<h6 class="mb-5 text-xl leading-tight font-bold text-primary">Artikel Terkait</h6>
+								<h6 class="mb-5 text-xl leading-tight font-bold text-primary">
+									Artikel Terkait
+								</h6>
 								<div class="flex flex-col gap-5">
-									<a href="detail.html" class="flex flex-col gap-3 no-underline text-black rounded overflow-hidden transition-transform duration-300 hover:-translate-y-1">
+									<a
+										href="detail.html"
+										class="flex flex-col gap-3 no-underline text-black rounded overflow-hidden transition-transform duration-300 hover:-translate-y-1"
+									>
 										<img
 											src="./assets/images/types-coffee.jpeg"
 											alt="Blog post"
 											class="w-full h-[140px] object-cover rounded"
 										/>
 										<div class="flex flex-col gap-2">
-											<h4 class="text-base font-semibold leading-tight text-black">
+											<h4
+												class="text-base font-semibold leading-tight text-black"
+											>
 												10 Coffee Mistakes to Avoid
 											</h4>
 											<p class="text-sm text-gray-600">11 Jan 2023</p>
 										</div>
 									</a>
-									<a href="detail.html" class="flex flex-col gap-3 no-underline text-black rounded overflow-hidden transition-transform duration-300 hover:-translate-y-1">
+									<a
+										href="detail.html"
+										class="flex flex-col gap-3 no-underline text-black rounded overflow-hidden transition-transform duration-300 hover:-translate-y-1"
+									>
 										<img
 											src="./assets/images/types-coffee.jpeg"
 											alt="Blog post"
 											class="w-full h-[140px] object-cover rounded"
 										/>
 										<div class="flex flex-col gap-2">
-											<h4 class="text-base font-semibold leading-tight text-black">
+											<h4
+												class="text-base font-semibold leading-tight text-black"
+											>
 												The Art of Coffee Brewing
 											</h4>
 											<p class="text-sm text-gray-600">5 Feb 2023</p>
@@ -248,25 +314,51 @@
 								/>
 							</a>
 							<p class="mb-6 leading-relaxed">
-								Crafting exceptional coffee experiences since 2010. Join us in our passion for quality beans, expert brewing, and creating a warm, welcoming community space.
+								Crafting exceptional coffee experiences since 2010. Join us in
+								our passion for quality beans, expert brewing, and creating a
+								warm, welcoming community space.
 							</p>
 							<div class="flex flex-col gap-3">
-								<a href="#" class="text-white hover:text-secondary transition-all duration-300">123 Eco Street, Green City</a>
-								<a href="tel:+15555555555" class="text-white hover:text-secondary transition-all duration-300">+1 (555) 555-5555</a>
-								<a href="mailto:contact@comment.com" class="text-white hover:text-secondary transition-all duration-300">contact@comment.com</a>
+								<a
+									href="#"
+									class="text-white hover:text-secondary transition-all duration-300"
+									>123 Eco Street, Green City</a
+								>
+								<a
+									href="tel:+15555555555"
+									class="text-white hover:text-secondary transition-all duration-300"
+									>+1 (555) 555-5555</a
+								>
+								<a
+									href="mailto:contact@comment.com"
+									class="text-white hover:text-secondary transition-all duration-300"
+									>contact@comment.com</a
+								>
 							</div>
 						</div>
 						<div>
 							<h3 class="text-2xl mb-2">Quick Links</h3>
 							<ul class="flex flex-col">
 								<li class="my-2">
-									<a href="index.html" class="text-white hover:text-secondary transition-all duration-300">Home</a>
+									<a
+										href="index.html"
+										class="text-white hover:text-secondary transition-all duration-300"
+										>Home</a
+									>
 								</li>
 								<li class="my-2">
-									<a href="about.html" class="text-white hover:text-secondary transition-all duration-300">About</a>
+									<a
+										href="about.html"
+										class="text-white hover:text-secondary transition-all duration-300"
+										>About</a
+									>
 								</li>
 								<li class="my-2">
-									<a href="blogs.html" class="text-white hover:text-secondary transition-all duration-300">Blog</a>
+									<a
+										href="blogs.html"
+										class="text-white hover:text-secondary transition-all duration-300"
+										>Blog</a
+									>
 								</li>
 							</ul>
 						</div>
@@ -274,17 +366,26 @@
 							<h3 class="text-2xl mb-2">Social Media</h3>
 							<ul class="flex flex-col">
 								<li class="my-2">
-									<a href="#" class="text-white hover:text-secondary transition-all duration-300">
+									<a
+										href="#"
+										class="text-white hover:text-secondary transition-all duration-300"
+									>
 										<i class="fab fa-instagram"></i> Instagram
 									</a>
 								</li>
 								<li class="my-2">
-									<a href="#" class="text-white hover:text-secondary transition-all duration-300">
+									<a
+										href="#"
+										class="text-white hover:text-secondary transition-all duration-300"
+									>
 										<i class="fab fa-facebook"></i> Facebook
 									</a>
 								</li>
 								<li class="my-2">
-									<a href="#" class="text-white hover:text-secondary transition-all duration-300">
+									<a
+										href="#"
+										class="text-white hover:text-secondary transition-all duration-300"
+									>
 										<i class="fab fa-linkedin"></i> LinkedIn
 									</a>
 								</li>
@@ -298,7 +399,7 @@
 				</div>
 			</footer>
 		</main>
-		
+
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 		<script>
 			feather.replace();
