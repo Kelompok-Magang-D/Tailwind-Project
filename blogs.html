@@ -93,11 +93,6 @@
 						>
 					</nav>
 					<div class="flex gap-4 items-center">
-						<button
-							class="bg-teal text-white font-bold uppercase text-base px-5 py-3 rounded shadow-md hover:bg-white hover:text-black transition-all duration-300"
-						>
-							Contact Us
-						</button>
 						<div class="hamburger md:hidden cursor-pointer">
 							<span
 								class="bar block w-[25px] h-[3px] my-[5px] mx-auto bg-white transition-all duration-300"
@@ -358,6 +353,28 @@
 				</div>
 			</section>
 
+			<!--Contact us dan chat popup-->
+			<section>
+				<div class="fixed bottom-4 right-2 z-50 ">
+				  <button class="bg-teal text-white font-bold uppercase text-base px-5 py-3 rounded shadow-md hover:bg-white hover:text-black transition-all duration-300" onclick="toggleChat()">
+					Contact Us
+					</button>
+				</div>
+				   <div id="chat-popup" class="fixed bottom-8 right-2 bg-white border border-gray-300 rounded-lg shadow-lg w-80 mb-10 hidden z-50">
+				       <div class="p-1">
+								<h2 class="mb-0 pb-0 text-lg font-bold text-center text-gray-800">Welcome to COHEE</h2>
+								<p class="mt-1 text-center text-gray-600">Ada yang bisa kami bantu?</p>
+									<div class="mt-4 mb-4 flex flex-col">
+											<form class="flex flex-col justify-center items-center " action="index.html" method="post">
+												<input type="text" id="your_name" Placeholder="Your name"class="text-black h-8 px-4 py-0 mr-2 ml-2 mb-2 mt-2">
+												<input type="email" id="your_email" Placeholder="you@gmail.com" class="text-black h-8 px-4 py-0 mr-2 ml-2 mb-2 mt-2">
+												<input id="messageInput" type="text" placeholder="Tulis pesanmu.." class="text-black h-8 px-4 py-0 mr-2 ml-2 mb-2 mt-2"></input>
+												<button id="sendButton" type="button" class=" bg-primary buttom-5 xt-black h-8 px-4 py-0 hover:bg-white hover:text-black transition-all duration-300 ">Kirim</button>
+												</form>
+									</div>
+				   			</div>
+			</section>
+
 			<!-- Footer -->
 			<footer class="py-16 pb-8 bg-primary text-white">
 				<div class="container mx-auto px-4 flex flex-col">
@@ -462,5 +479,24 @@
 		</script>
 		<script src="./assets/js/script.js"></script>
 		<script src="./assets/js/hamburger.js"></script>
+		<script>
+        function toggleChat() {
+            const chatPopup = document.getElementById('chat-popup');
+            chatPopup.classList.toggle('hidden');
+        }
+    </script>
+		<script>
+		     document.getElementById('sendButton').addEventListener('click', function() {
+		         var message = document.getElementById('messageInput').value;
+		         if (message) {
+		             // Send the message (you can replace this with your actual send logic)
+		             console.log('Message sent:', message);
+		             // Clear the input box
+		             document.getElementById('messageInput').value = '';
+								 document.getElementById('your_email').value = '';
+								 document.getElementById('your_name').value = '';
+		         }
+		     });
+		 </script>
 	</body>
 </html>
