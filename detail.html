@@ -85,13 +85,13 @@
 							class="text-lg font-medium text-white hover:text-secondary transition-all duration-300"
 							>Blog</a
 						>
+						<a
+						href="detail.html"
+						class="text-lg font-medium text-white hover:text-secondary transition-all duration-300"
+						>Detail</a
+					>
 					</nav>
 					<div class="flex gap-4 items-center">
-						<button
-							class="bg-teal text-white font-bold uppercase text-base px-5 py-3 rounded shadow-md hover:bg-white hover:text-black transition-all duration-300"
-						>
-							Contact Us
-						</button>
 						<div class="hamburger md:hidden cursor-pointer">
 							<span
 								class="bar block w-[25px] h-[3px] my-[5px] mx-auto bg-white transition-all duration-300"
@@ -121,6 +121,11 @@
 								class="block py-6 text-white text-xl hover:text-secondary transition-all duration-300"
 								>Blog</a
 							>
+							<a
+							href="detail.html"
+							class="block py-6 text-white text-xl hover:text-secondary transition-all duration-300"
+							>Details</a
+						>
 						</div>
 					</div>
 				</div>
@@ -140,7 +145,7 @@
 						<div class="flex flex-col items-center">
 							<div class="mb-3">
 								<img
-									src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+									src="assets/images/owner.png"
 									alt="Relume placeholder avatar"
 									class="w-14 h-14 min-h-14 min-w-14 rounded-full object-cover"
 								/>
@@ -173,17 +178,17 @@
 						class="grid grid-cols-1 lg:grid-cols-[1fr_0.5fr] gap-8 lg:gap-20"
 					>
 						<div class="text-base md:text-lg lg:text-xl leading-7">
-							<h3 class="text-xl md:text-2xl font-bold mb-4 text-primary">
+							<h3 class="text-xl md:text-5xl font-bold mb-4 text-primary">
 								Introduction
 							</h3>
-							<p class="mb-6">
+							<p class="text-justify mb-6">
 								Starting a coffee shop is an exciting venture that combines
 								passion for coffee with entrepreneurial spirit. Whether you're a
 								seasoned barista or a business enthusiast, opening your own
 								coffee shop requires careful planning, dedication, and a deep
 								understanding of both coffee culture and business fundamentals.
 							</p>
-							<p class="mb-6">
+							<p class="text-justify mb-6">
 								In this comprehensive guide, we'll walk you through the
 								essential steps of launching a successful coffee shop, from
 								developing your unique concept to creating an inviting
@@ -193,12 +198,12 @@
 							</p>
 							<figure class="my-8">
 								<img
-									src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
+									src="assets/images/coffee-time-profile.jpg"
 									alt="Relume placeholder image"
 									class="w-full rounded"
 								/>
 								<figcaption class="text-center text-sm text-gray-600 mt-2">
-									Image caption goes here
+									Coffee Time Room
 								</figcaption>
 							</figure>
 							<h6 class="text-lg font-semibold mt-6 mb-4">
@@ -207,7 +212,7 @@
 								service, and a welcoming atmosphere that encourages customers to
 								stay and return.
 							</h6>
-							<p class="mb-6">
+							<p class="text-justify mb-6">
 								Your coffee shop's success begins with sourcing high-quality
 								beans and investing in proper equipment. Build relationships
 								with reliable suppliers who share your commitment to quality.
@@ -223,7 +228,7 @@
 								serving great coffee - it's about creating an experience that
 								makes people want to become part of your coffee community.&quot;
 							</blockquote>
-							<p class="mb-6">
+							<p class="text-justify mb-6">
 								Develop a solid business plan that includes detailed financial
 								projections, marketing strategies, and operational procedures.
 								Consider your location carefully - it can make or break your
@@ -232,22 +237,22 @@
 								online presence through social media and a user-friendly
 								website.
 							</p>
-							<h4 class="text-lg md:text-xl font-bold mb-4 text-primary">
+							<h4 class="text-lg md:text-3xl font-bold mb-4 text-primary">
 								Conclusion
 							</h4>
-							<p class="mb-6">
+							<p class="text-justify mb-6">
 								Starting a coffee shop requires dedication, passion, and careful
 								planning. Focus on quality in every aspect of your business,
 								from your coffee beans to your customer service. Build a strong
 								team that shares your vision and values.
 							</p>
-							<p class="mb-6">
+							<p class="text-justify mb-6">
 								Remember that success doesn't happen overnight. Be prepared to
 								adjust your strategies based on customer feedback and market
 								trends. Stay true to your vision while remaining flexible enough
 								to evolve with your customers' needs.
 							</p>
-							<p class="mb-6">
+							<p class="text-justify mb-6">
 								With the right combination of passion, planning, and
 								perseverance, your coffee shop can become more than just a
 								business - it can become a beloved part of your community where
@@ -301,6 +306,28 @@
 						</div>
 					</div>
 				</div>
+			</section>
+
+			<!--Contact us dan chat popup-->
+			<section>
+				<div class="fixed bottom-4 right-2 z-50 ">
+				  <button class="bg-teal text-white font-bold uppercase text-base px-5 py-3 rounded shadow-md hover:bg-white hover:text-black transition-all duration-300" onclick="toggleChat()">
+					Contact Us
+					</button>
+				</div>
+				   <div id="chat-popup" class="fixed bottom-8 right-2 bg-white border border-gray-300 rounded-lg shadow-lg w-80 mb-10 hidden z-50">
+				       <div class="p-1">
+								<h2 class="mb-0 pb-0 text-lg font-bold text-center text-gray-800">Welcome to COHEE</h2>
+								<p class="mt-1 text-center text-gray-600">Ada yang bisa kami bantu?</p>
+									<div class="mt-4 mb-4 flex flex-col">
+											<form class="flex flex-col justify-center items-center " action="index.html" method="post">
+												<input type="text" id="your_name" Placeholder="Your name"class="text-black h-8 px-4 py-0 mr-2 ml-2 mb-2 mt-2">
+												<input type="email" id="your_email" Placeholder="you@gmail.com" class="text-black h-8 px-4 py-0 mr-2 ml-2 mb-2 mt-2">
+												<input id="messageInput" type="text" placeholder="Tulis pesanmu.." class="text-black h-8 px-4 py-0 mr-2 ml-2 mb-2 mt-2"></input>
+												<button id="sendButton" type="button" class=" bg-primary buttom-5 xt-black text-white h-8 px-4 py-0 hover:bg-white hover:text-black transition-all duration-300 ">Kirim</button>
+												</form>
+									</div>
+				   			</div>
 			</section>
 
 			<!-- Footer -->
@@ -408,5 +435,24 @@
 		</script>
 		<script src="./assets/js/script.js"></script>
 		<script src="./assets/js/hamburger.js"></script>
+		<script>
+        function toggleChat() {
+            const chatPopup = document.getElementById('chat-popup');
+            chatPopup.classList.toggle('hidden');
+        }
+    </script>
+		<script>
+		     document.getElementById('sendButton').addEventListener('click', function() {
+		         var message = document.getElementById('messageInput').value;
+		         if (message) {
+		             // Send the message (you can replace this with your actual send logic)
+		             console.log('Message sent:', message);
+		             // Clear the input box
+		             document.getElementById('messageInput').value = '';
+								 document.getElementById('your_email').value = '';
+								 document.getElementById('your_name').value = '';
+		         }
+		     });
+		 </script>
 	</body>
 </html>
